@@ -2,6 +2,8 @@
 	- [x] create github rep
 	- [] setup gulp tasks
 		- [x] basic stuff: clean, copy, watch, etc
+		- [] server
+		- [] sass if needed
 		- [] protractor
 		- [] jasmine
 - [] v1 call the flickr API and display a list of results as text
@@ -14,4 +16,5 @@
 - [] vx detail page
 - [] vx responsive
 - [] tech debt
-	- [] gulp clean is deprecated - replace with del
+	- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
+	- [] gulp prod needed - currently only have a local build which includes the map files

@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 // clean
-gulp.task('clean', function() {
+gulp.task('clean', function(cb) {
 	return gulp.src('build/**/*.*', {read: false})
 		.pipe(plugins.clean());
 });
@@ -19,10 +19,15 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('build/js/'));
 });
 
+// copy libs
+gulp.task('copyLibs', function() {
+	return gulp.src(['node_modules/angular/angular.min.js', 'node_modules/angular/angular.min.js.map'])
+		.pipe(gulp.dest('build/libs/'));
+});
+
 // copy html
 gulp.task('html', function() {
 	return gulp.src('src/*.html')
-		.pipe(plugins.replace(/(\w*)(\.js)/g, '$1.min$2'))
 		.pipe(gulp.dest('build/'));
 });
 
@@ -37,10 +42,13 @@ gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['scripts']);
   gulp.watch('src/css/*.css', ['css']);
   gulp.watch('src/*.html', ['html']);
+  gulp.watch('gulpfile.js', ['local']);
 });
 
 // compound tasks
-gulp.task('local', ['clean', 'scripts', 'html', 'css']);
+gulp.task('local', ['clean'], function() {
+	gulp.start('scripts', 'copyLibs', 'css', 'html');
+});
 
 // default
 gulp.task('default', ['local']);
