@@ -1,8 +1,9 @@
 [] initial project setup
-	[] create github rep
+	[x] create github rep
 	[] setup gulp tasks
-		[] gulp protractor
-		[] gulp jasmine
+		[x] basic stuff: clean, copy, watch, etc
+		[] protractor
+		[] jasmine
 [] v1 call the flickr API and display a list of results as text
 	[] photo url
 	[] post title
@@ -12,3 +13,5 @@
 [] v2 load the image
 [] vx detail page
 [] vx responsive
+[] tech debt
+	[] gulp clean is deprecated - replace with del
