@@ -1,5 +1,5 @@
-describe('placeholder integration test', function() {
-	it('call the flickr API and display a list of results as text', function() {
+describe('minimal list view spec', function() {
+	it('should call the flickr API and display a list of results as text', function() {
 		browser.get('http://localhost:8000');
 		it('should show a photo url', function() {
 
@@ -16,6 +16,5 @@ describe('placeholder integration test', function() {
 		it('should show a flickr link', function() {
 
 		});
-		expect(true).toBe(true);
 	});
 });
