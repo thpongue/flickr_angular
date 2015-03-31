@@ -5,5 +5,5 @@ npm install
 
 run
 ```
-grunt
+gulp
 ```

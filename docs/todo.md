@@ -3,6 +3,8 @@
 	- [] setup gulp tasks
 		- [x] basic stuff: clean, copy, watch, etc
 		- [x] integration tests (gulp-angular-protractor [with built in web driver start/stop])
+		- [] gulp server
+		- [] make gulp server a prerequisite of our integration tests
 		- [] unit tests (jasmine)
 		- [] sass if needed
 - [] v1 call the flickr API and display a list of results as text
@@ -18,4 +20,3 @@
 	- [] build
 		- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
 		- [] gulp prod needed - currently only have a local build which includes the map files
-		- [] gulp server
