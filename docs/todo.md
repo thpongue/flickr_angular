@@ -3,8 +3,8 @@
 	- [] setup gulp tasks
 		- [x] basic stuff: clean, copy, watch, etc
 		- [x] integration tests (gulp-angular-protractor [with built in web driver start/stop])
-		- [] gulp server
-		- [] make gulp server a prerequisite of our integration tests
+		- [x] gulp server
+		- [x] make gulp server a prerequisite of our integration tests
 		- [] unit tests (jasmine)
 		- [] sass if needed
 - [] v1 call the flickr API and display a list of results as text
