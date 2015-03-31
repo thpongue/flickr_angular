@@ -2,10 +2,9 @@
 	- [x] create github rep
 	- [] setup gulp tasks
 		- [x] basic stuff: clean, copy, watch, etc
-		- [] server
+		- [x] integration tests (gulp-angular-protractor [with built in web driver start/stop])
+		- [] unit tests (jasmine)
 		- [] sass if needed
-		- [] protractor
-		- [] jasmine
 - [] v1 call the flickr API and display a list of results as text
 	- [] photo url
 	- [] post title
@@ -16,5 +15,7 @@
 - [] vx detail page
 - [] vx responsive
 - [] tech debt
-	- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
-	- [] gulp prod needed - currently only have a local build which includes the map files
+	- [] build
+		- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
+		- [] gulp prod needed - currently only have a local build which includes the map files
+		- [] gulp server
