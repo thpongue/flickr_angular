@@ -78,18 +78,36 @@ gulp.task('webdriver_update', webdriver_update);
 // Start the standalone selenium server
 gulp.task('webdriver_standalone', webdriver_standalone);
 
-gulp.task('integration', ['webdriver_update'], function(cb) {
-    gulp
-        .src(['tests/integration/**/*.*'])
-        .pipe(gulpProtractorAngular({
-            'configFile': 'protractor.config.js',
-            'debug': false,
-            'autoStartStopServer': true
-        }))
-        .on('error', function(e) {
-            console.log(e);
-        })
-        .on('end', cb);
+// main integration task - run protractor then stop server
+gulp.task('integration', ["stop_server"], function(cb) {
+});
+
+// stop server once protractor has run
+gulp.task('stop_server', ["protractor"], function() {
+	plugins.connect.serverClose();
+});
+
+// start server then run protractor
+gulp.task('protractor', ['start_server'], function(cb) {
+	gulp
+		.src(['tests/integration/**/*.*'])
+		.pipe(gulpProtractorAngular({
+			'configFile': 'protractor.config.js',
+			'debug': false,
+			'autoStartStopServer': true
+		}))
+		.on('error', function(e) {
+			console.log(e);
+		})
+		.on('end', cb);
+});
+
+// start http://localhost:8000 pointing to our build folder
+gulp.task('start_server', function() {
+	plugins.connect.server({
+		root: 'build',
+		port: 8000
+	});
 });
 
 
