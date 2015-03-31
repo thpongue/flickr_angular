@@ -90,7 +90,7 @@ gulp.task('stop_server', ["protractor"], function() {
 // start server then run protractor
 gulp.task('protractor', ['start_server'], function(cb) {
 	gulp
-		.src(['tests/integration/**/*.*'])
+		.src(['tests/integration/**/*.js'])
 		.pipe(gulpProtractorAngular({
 			'configFile': 'protractor.config.js',
 			'debug': false,
@@ -112,6 +112,15 @@ gulp.task('start_server', function() {
 
 
 //----------------------------------------------------------------
+// unit tests (jasmine)
+//----------------------------------------------------------------
+gulp.task('unit', function () {
+	return gulp.src('tests/unit/**/*.js')
+		.pipe(plugins.jasmine());
+});
+
+
+//----------------------------------------------------------------
 // watch
 //----------------------------------------------------------------
 gulp.task('watch', function() {
@@ -127,7 +136,7 @@ gulp.task('watch', function() {
 //----------------------------------------------------------------
 // tests
 gulp.task('tests', ["localBuild"], function() {
-	gulp.start('integration');
+	gulp.start('integration', 'unit');
 });
 
 // local build
