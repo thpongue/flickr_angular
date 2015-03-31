@@ -6,15 +6,37 @@
 		- [x] gulp server
 		- [x] make gulp server a prerequisite of our integration tests
 		- [x] unit tests (jasmine)
-- [] v1 call the flickr API and display a list of results as text
-	- [] photo url
-	- [] post title
-	- [] post author
-	- [] publish data
-	- [] link to flickr
-- [] v2 load the image
-- [] vx detail page
-- [] vx responsive
+- [] list view
+	- [] call the flickr API and display a list of results as text
+		- [] photo url
+		- [] post title
+		- [] post author
+		- [] publish data
+		- [] link to flickr
+	- [] load the image
+	- [] link to detail view
+- [] detail view
+	- [] call the flickr API and display a list of results as text
+		- [] photo title
+		- [] photo author
+		- [] publish date
+		- [] photo url
+		- [] tags
+		- [] detail text
+	- [] load the image
+	- [] link back to list view
+- [] backlog
+	- [] update protractor tests to support (https://support.google.com/a/answer/33864)
+		- [] chrome
+		- [] firefox
+		- [] internet explorer
+		- [] safari	
+	- [] responsive
+	- [] sass
+	- [] search
+	- [] infinite load / pagination / some way of dealing with lots of content
+	- [] css and general beautification
+	- [] brainstorm other ideas
 - [] tech debt
 	- [] build
 		- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
