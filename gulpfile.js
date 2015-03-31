@@ -127,7 +127,7 @@ gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['scripts']);
   gulp.watch('src/css/*.css', ['css']);
   gulp.watch('src/*.html', ['html']);
-  gulp.watch('gulpfile.js', ['local']);
+  gulp.watch('gulpfile.js', ['localBuild']);
 });
 
 

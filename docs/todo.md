@@ -1,5 +1,5 @@
 - [] initial project setup
-	- [x] create github rep
+	- [x] create github repo
 	- [x] setup gulp tasks
 		- [x] basic stuff: clean, copy, watch, etc
 		- [x] integration tests (gulp-angular-protractor [with built in web driver start/stop])
