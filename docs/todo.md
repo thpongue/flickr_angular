@@ -41,6 +41,7 @@
 - [] tech debt
 	- [] build
 		- [] look into a better way of managing task dependencies
+			- [] use run-sequence
 		- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
 		- [] gulp-angular-protractor doesn't work with gulp-load-plugins
 		- [] gulp prod needed - currently only have a local build which includes the map files

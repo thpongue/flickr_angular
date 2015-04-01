@@ -4,19 +4,19 @@ describe('minimal list view spec', function() {
 			browser.get('http://localhost:8000');
 		});
 		it('should show a photo url', function() {
-				expect(element(by.id('postList.post1.photoUrl')).isPresent()).toBe(true);
+				expect(element(by.css('#photoUrl1')).isPresent()).toBe(true);
 		});
 		it('should show a post title', function() {
-				expect(element(by.id('postList.post1.postTitle')).isPresent()).toBe(true);
+				expect(element(by.css('#postTitle1')).isPresent()).toBe(true);
 		});
 		it('should show a post author', function() {
-				expect(element(by.id('postList.postAuthor')).isPresent()).toBe(true);
+				expect(element(by.css('#postAuthor1')).isPresent()).toBe(true);
 		});
 		it('should show a publish date', function() {
-				expect(element(by.id('postList.post1.publishDate')).isPresent()).toBe(true);
+				expect(element(by.css('#publishDate1')).isPresent()).toBe(true);
 		});
 		it('should show a flickr link', function() {
-				expect(element(by.id('postList.post1.flickrLink')).isPresent()).toBe(true);
+				expect(element(by.css('#flickrLink1')).isPresent()).toBe(true);
 		});
 	});
 });
