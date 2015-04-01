@@ -123,7 +123,7 @@ gulp.task('unit', function () {
 //----------------------------------------------------------------
 // watch
 //----------------------------------------------------------------
-gulp.task('watch', function() {
+gulp.task('watch', ['start_server'], function() {
   gulp.watch('src/js/*.js', ['scripts']);
   gulp.watch('src/css/*.css', ['css']);
   gulp.watch('src/*.html', ['html']);

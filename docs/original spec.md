@@ -1,4 +1,6 @@
-The task is to consume a public JSON API Feed (documentation) and display the resulting data according to these annotated wireframes.
+The task is to consume a public JSON API Feed: https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json
+(documentation: https://www.flickr.com/services/feeds/docs/photos_public/) 
+and display the resulting data according to these annotated wireframes.
 
 It should only take a few hours and there's no deadline. You won't be judged on the completion time, so there's no rush, just let us know once it's completed.
 
