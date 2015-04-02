@@ -1,85 +1,104 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
-		<meta name="author" content="Neteffects">
-		<meta name="viewport" content="width=device-width, user-scalable=no">
-		<link href="css/styles.css" rel="stylesheet" type="text/css">
-		<script src="js/app.min.js"></script>
-		<script src="libs/angular.min.js"></script>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome='>
+		<meta name='author' content='Neteffects'>
+		<meta name='viewport' content='width=device-width, user-scalable=no'>
+		<link href='css/styles.css' rel='stylesheet' type='text/css'>
+		<script src='libs/angular.min.js'></script>
+		<script src='js/app.min.js'></script>
 	</head>
-	<body ng-app>
-		<div id="items">
-			<div id="item1">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item2">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item3">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item4">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item5">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item6">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item7">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item8">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item9">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
-			</div>
-			<div id="item10">
-				<div id="photoUrl">dummy data</div>
-				<div id="postTitle">dummy data</div>
-				<div id="postAuthor">dummy data</div>
-				<div id="publishDate">dummy data</div>
-				<div id="flickrLink">dummy data</div>
+	<body ng-app='app'>
+		<script>
+			angular.module('app', []);
+
+			(function() {
+				angular.module('app').controller("myController", function($http, $scope) {
+					$scope.items = [
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						},
+						{
+							photoUrl: "dummy data",
+							postTitle: "dummy data",
+							postAuthor: "dummy data",
+							publishDate: "dummy data",
+							flickrLink: "dummy data"
+						}
+					];
+				});
+			}());
+		</script>
+		<div ng-controller='myController'>
+			<div id='items' ng-repeat='item in items'>
+				<div id='item{{$index+1}}'>
+					<div id='photoUrl'>dummy data</div>
+					<div id='postTitle'>dummy data</div>
+					<div id='postAuthor'>dummy data</div>
+					<div id='publishDate'>dummy data</div>
+					<div id='flickrLink'>dummy data</div>
+				</div>
 			</div>
 		</div>
 	</body>
