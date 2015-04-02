@@ -24,9 +24,6 @@ gulp.task('clean', function(cb) {
 //----------------------------------------------------------------
 gulp.task('scripts', function() {
 	return gulp.src('src/js/*.js')
-		.pipe(plugins.concat('app.js'))
-		.pipe(plugins.rename({suffix: '.min'}))
-		.pipe(plugins.uglify())
 		.pipe(gulp.dest('build/js/'));
 });
 
