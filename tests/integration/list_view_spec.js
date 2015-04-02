@@ -1,5 +1,5 @@
 describe('minimal list view spec', function() {
-	describe('should call the flickr API and display at least one post', function() {
+	describe('should list the post data specified in the list view wireframe', function() {
 		beforeEach(function() {
 			browser.get('http://localhost:8001');
 		});
