@@ -1,22 +1,34 @@
-describe('minimal list view spec', function() {
-	describe('should list the post data specified in the list view wireframe', function() {
-		beforeEach(function() {
-			browser.get('http://localhost:8001');
+describe('Item view spec', function() {
+	beforeEach(function() {
+		browser.get('http://localhost:8001');
+	});
+	
+	describe('should list the data for 10 flickr posts', function() {
+		var numberOfItems = 10;
+		it('should show a photo url for each item', function() {
+			for (i=1; i<=numberOfItems;i++) {
+				expect(element(by.css('#items #item'+ i +' #photoUrl')).isPresent()).toBe(true);
+			}
 		});
-		it('should show a photo url', function() {
-				expect(element(by.css('#photoUrl1')).isPresent()).toBe(true);
+		it('should show a post title for each item', function() {
+			for (i=1; i<=numberOfItems;i++) {
+				expect(element(by.css('#items #item'+ i +' #postTitle')).isPresent()).toBe(true);
+			}
 		});
-		it('should show a post title', function() {
-				expect(element(by.css('#postTitle1')).isPresent()).toBe(true);
+		it('should show a post author for each item', function() {
+			for (i=1; i<=numberOfItems;i++) {
+				expect(element(by.css('#items #item'+ i +' #postAuthor')).isPresent()).toBe(true);
+			}
 		});
-		it('should show a post author', function() {
-				expect(element(by.css('#postAuthor1')).isPresent()).toBe(true);
+		it('should show a publish date for each item', function() {
+			for (i=1; i<=numberOfItems;i++) {
+				expect(element(by.css('#items #item'+ i +' #publishDate')).isPresent()).toBe(true);
+			}
 		});
-		it('should show a publish date', function() {
-				expect(element(by.css('#publishDate1')).isPresent()).toBe(true);
-		});
-		it('should show a flickr link', function() {
-				expect(element(by.css('#flickrLink1')).isPresent()).toBe(true);
+		it('should show a flickr link for each item', function() {
+			for (i=1; i<=numberOfItems;i++) {
+				expect(element(by.css('#items #item'+ i +' #flickrLink')).isPresent()).toBe(true);
+			}
 		});
 	});
 });

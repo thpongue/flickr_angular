@@ -7,6 +7,7 @@
 		- [x] make gulp server a prerequisite of our integration tests
 		- [x] unit tests (jasmine)
 		- [x] watch should invoke the server
+		- [] output integration test results to file (and .gitignore it)
 - [] list view
 	- [] call the flickr API and display a list of results as text
 		- [] photo url
