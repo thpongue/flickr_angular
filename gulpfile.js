@@ -102,11 +102,11 @@ gulp.task('protractor', ['start_server'], function(cb) {
 		.on('end', cb);
 });
 
-// start http://localhost:8000 pointing to our build folder
+// start http://localhost:8001 pointing to our build folder
 gulp.task('start_server', function() {
 	plugins.connect.server({
 		root: 'build',
-		port: 8000
+		port: 8001
 	});
 });
 
