@@ -1,12 +1,14 @@
 - [] initial project setup
 	- [x] create github repo
-	- [x] setup gulp tasks
+	- [] setup gulp tasks
 		- [x] basic stuff: clean, copy, watch, etc
 		- [x] integration tests (gulp-angular-protractor [with built in web driver start/stop])
 		- [x] gulp server
 		- [x] make gulp server a prerequisite of our integration tests
 		- [x] unit tests (jasmine)
 		- [x] watch should invoke the server
+		- [] watch seems flakey - investigate
+		- [] look into headless integration testing
 		- [] output integration test results to file (and .gitignore it)
 		- [] watch is exiting on js errors
 - [] list view
