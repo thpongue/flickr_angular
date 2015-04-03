@@ -2,6 +2,7 @@
 // Include gulp
 //----------------------------------------------------------------
 var gulp = require('gulp');
+var jasmine = require('gulp-jasmine-phantom');
 
 
 //----------------------------------------------------------------
@@ -120,8 +121,7 @@ function startServer(port) {
 // unit tests (jasmine)
 //----------------------------------------------------------------
 gulp.task('unit', function () {
-	return gulp.src('tests/unit/**/*.js')
-		.pipe(plugins.jasmine());
+	// wip
 });
 
 

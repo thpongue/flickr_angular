@@ -7,6 +7,7 @@
 		- [x] make gulp server a prerequisite of our integration tests
 		- [x] unit tests (jasmine)
 		- [x] watch should invoke the server
+		- [] implement karma - probably not necessary to have any clever server stuff in the gulpfile which is a plus
 		- [] watch seems flakey - investigate
 		- [] look into headless integration testing
 		- [] output integration test results to file (and .gitignore it)
