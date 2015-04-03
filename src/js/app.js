@@ -76,3 +76,7 @@ angular.module('app', []);
 		];
 	});
 }());
+
+function FlickrData() {
+
+}
