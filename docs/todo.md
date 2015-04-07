@@ -1,17 +1,13 @@
 - [] initial project setup
 	- [x] create github repo
-	- [] setup gulp tasks
+	- [x] setup gulp tasks
 		- [x] basic stuff: clean, copy, watch, etc
 		- [x] integration tests (gulp-angular-protractor [with built in web driver start/stop])
 		- [x] gulp server
 		- [x] make gulp server a prerequisite of our integration tests
 		- [x] unit tests (jasmine)
 		- [x] watch should invoke the server
-		- [] implement karma - probably not necessary to have any clever server stuff in the gulpfile which is a plus
-		- [] watch seems flakey - investigate
-		- [] look into headless integration testing
-		- [] output integration test results to file (and .gitignore it)
-		- [] watch is exiting on js errors
+		- [x] implement karma - probably not necessary to have any clever server stuff in the gulpfile which is a plus
 - [] list view
 	- [] call the flickr API and display a list of results as text
 		- [] photo url
@@ -51,3 +47,7 @@
 		- [] gulp-angular-protractor doesn't work with gulp-load-plugins
 		- [] gulp prod needed - currently only have a local build which includes the map files
 		- [] our integration task isn't clever enough to move on if the server is already running
+		- [] watch seems flakey - investigate
+		- [] look into headless integration testing
+		- [] output integration test results to file (and .gitignore it)
+		- [] watch is exiting on js errors
