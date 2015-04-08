@@ -21,7 +21,7 @@ describe('placeholder unit test', function() {
 		expect(sut).not.toBeNull();
 	});
 	
-	it('should sychronously return a FlickrData object and call the flickr url to populate the object', function () {
+	it('should return a FlickrData object and call the flickr url to populate the object', function () {
 		var flickrData = sut.getData();
 		expect(flickrData).not.toBeNull();
 		expect(mock.get).toHaveBeenCalledWith(flickrUrl);
