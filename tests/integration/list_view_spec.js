@@ -1,7 +1,7 @@
 describe('Item view spec', function() {
 	beforeEach(function() {
 		browser.get('http://localhost:8001');
-		by.css('#loadDataButton').click();
+		element(by.css('#loadDataButton')).click();
 	});
 	
 	describe('should list the data for 10 flickr posts', function() {
