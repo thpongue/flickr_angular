@@ -1,72 +1,14 @@
 
 (function() {
-	console.log("app.js called");
 	angular.module('app', [])
 		.controller('listController', listController)
 		.service('flickrDataService', FlickrDataService);
 
 	function listController(flickrDataService) {
-		this.items = [{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		},{
-			photoUrl: 'dummy data',
-			postTitle: 'dummy data',
-			postAuthor: 'dummy data',
-			publishDate: 'dummy data',
-			flickrLink: 'dummy data'
-		}];
+		this.flickrData = null;
+		this.loadData = function() {
+			this.flickrData = flickrDataService.getData();
+		}
 	};
 
 	// returns a FlickrData object which it populates once the data has arrived
@@ -76,12 +18,72 @@
 	}
 
 	FlickrDataService.prototype.getData = function() {
-		this.http.get(this.flickrUrl);
+//		this.http.get(this.flickrUrl);
 		return new FlickrData();
 	}
 
 	function FlickrData() {
-
+		this.value = [{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		},{
+			photoUrl: 'photoUrl',
+			postTitle: 'postTitle',
+			postAuthor: 'postAuthor',
+			publishDate: 'publishDate',
+			flickrLink: 'flickrLink'
+		}];
 	}
 }());
 

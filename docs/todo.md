@@ -8,11 +8,15 @@
 		- [x] unit tests (jasmine)
 		- [x] watch should invoke the server
 		- [x] implement karma - probably not necessary to have any clever server stuff in the gulpfile which is a plus
+		- [] run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
 - [] admin
 	- [] go through the Todd Moto style guide to ensure it complies
 	- [] should my js files be in camelCase?
 - [] list view
 	- [x] Move my FlickrDataService object to a Service
+	- [] update protractor code to work with aysnc data loading
+	- [] add load button and make clicking this button part of our integration test
+	- [] unit test without knowing about the http object - eg now I've learned I need to use jsonp my unit tests should not have to change - this has shown up a flaw in the design
 	- [] name my beforeEach functions to describe what they're up to
 	- [] make url private
 	- [] call the flickr API and display a list of results as text
