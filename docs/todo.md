@@ -8,9 +8,13 @@
 		- [x] unit tests (jasmine)
 		- [x] watch should invoke the server
 		- [x] implement karma - probably not necessary to have any clever server stuff in the gulpfile which is a plus
-		- [] go through the Todd Moto style guide to ensure it complies
-		- [] Move my FlickrData object to a Service
+- [] admin
+	- [] go through the Todd Moto style guide to ensure it complies
+	- [] should my js files be in camelCase?
 - [] list view
+	- [x] Move my FlickrDataService object to a Service
+	- [] name my beforeEach functions to describe what they're up to
+	- [] make url private
 	- [] call the flickr API and display a list of results as text
 		- [] photo url
 		- [] post title

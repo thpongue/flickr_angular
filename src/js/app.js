@@ -69,13 +69,14 @@
 		}];
 	};
 
+	// returns a FlickrData object which it populates once the data has arrived
 	function FlickrDataService($http) {
 		this.http = $http;
-		console.log("FlickrDataService created"); 
+		this.flickrUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json';
 	}
 
-	FlickrDataService.prototype.getData = function(url) {
-		this.http.get(url);
+	FlickrDataService.prototype.getData = function() {
+		this.http.get(this.flickrUrl);
 		return new FlickrData();
 	}
 
