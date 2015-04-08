@@ -32,7 +32,7 @@ gulp.task('scripts', function() {
 // copy libs
 //----------------------------------------------------------------
 gulp.task('libs', function() {
-	return gulp.src(['node_modules/angular/angular.min.js', 'node_modules/angular/angular.min.js.map'])
+	return gulp.src(['node_modules/angular/angular.js'])
 		.pipe(gulp.dest('build/libs/'));
 });
 
@@ -116,6 +116,7 @@ function startServer(port) {
 	});
 }
 
+
 //----------------------------------------------------------------
 // unit tests (jasmine)
 //----------------------------------------------------------------
@@ -138,19 +139,12 @@ gulp.task('unit', function() {
     });
 });
 
-gulp.task('autotest', function() {
-  return gulp.watch(['www/js/**/*.js', 'test/spec/*.js'], ['test']);
-});
-
 
 //----------------------------------------------------------------
 // watch
 //----------------------------------------------------------------
 gulp.task('watch', ['start_server_port_8000'], function() {
-  gulp.watch('src/js/*.js', ['scripts']);
-  gulp.watch('src/css/*.css', ['css']);
-  gulp.watch('src/*.html', ['html']);
-  gulp.watch('gulpfile.js', ['localBuild']);
+	gulp.watch( ['gulpfile.js', './src/**/*.*', './tests/unit/**/*.*'], ['autotest']);
 });
 
 
@@ -165,6 +159,11 @@ gulp.task('tests', ["localBuild"], function() {
 // local build
 gulp.task('localBuild', ['clean'], function() {
 	gulp.start('scripts', 'libs', 'css', 'html');
+});
+
+// build then unit tests
+gulp.task('autotest', ["localBuild"], function() {
+	gulp.start('unit');
 });
 
 
