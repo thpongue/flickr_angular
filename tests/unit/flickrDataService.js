@@ -13,9 +13,9 @@ describe('placeholder unit test', function() {
 		});
 	});
 
-  beforeEach(inject(function ($injector) {
+	beforeEach(inject(function ($injector) {
 		sut = $injector.get('flickrDataService');
-  }));
+	}));
 
 	it('should exist', function () {
 		expect(sut).not.toBeNull();
