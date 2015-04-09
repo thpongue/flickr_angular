@@ -14,76 +14,32 @@
 	// returns a FlickrData object which it populates once the data has arrived
 	function FlickrDataService($http) {
 		this.http = $http;
-		this.flickrUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json';
+		this.flickrUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK';
 	}
 
 	FlickrDataService.prototype.getData = function() {
-//		this.http.get(this.flickrUrl);
-		return new FlickrData();
+		var ret = new FlickrData();
+		this.http.jsonp(this.flickrUrl)
+			.success(function(data, status, headers, config) {
+				ret.setValue(data);
+			})
+			.error(function(data, status, headers, config) {
+				ret.setValue(null);
+			});
+		return ret;
 	}
 
 	function FlickrData() {
-		this.value = [{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		},{
-			photoUrl: 'photoUrl',
-			postTitle: 'postTitle',
-			postAuthor: 'postAuthor',
-			publishDate: 'publishDate',
-			flickrLink: 'flickrLink'
-		}];
+		this.SUCCESS = "SUCCESS";
+		this.FAILURE = "FAILURE";
+		this.PENDING = "PENDING";
+		this.status = this.PENDING;
+
+		this.setValue = function(value) {
+			this.value = value;
+			this.status = value ? this.SUCCESS : this.FAILURE;
+		}
+		
 	}
 }());
 

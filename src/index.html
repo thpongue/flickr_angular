@@ -12,13 +12,13 @@
 	<body ng-app='app'>
 		<div ng-controller='listController as listController'>
 			<input id='loadDataButton' type='button' value='load data' ng-click='listController.loadData()'></input>
-			<div id='items' ng-repeat='item in listController.flickrData.value'>
+			<div id='items' ng-repeat='item in listController.flickrData.value.items'>
 				<div id='item{{$index+1}}'>
-					<div id='photoUrl'>{{listController.flickrData.value[$index].photoUrl}}</div>
-					<div id='postTitle'>{{listController.flickrData.value[$index].postTitle}}</div>
-					<div id='postAuthor'>{{listController.flickrData.value[$index].postAuthor}}</div>
-					<div id='publishDate'>{{listController.flickrData.value[$index].publishDate}}</div>
-					<div id='flickrLink'>{{listController.flickrData.value[$index].flickrLink}}</div>
+					<div id='media'>{{listController.flickrData.value.items[$index].media.m}}</div>
+					<div id='title'>{{listController.flickrData.value.items[$index].title}}</div>
+					<div id='author'>{{listController.flickrData.value.items[$index].author}}</div>
+					<div id='date_taken'>{{listController.flickrData.value.items[$index].date_taken}}</div>
+					<div id='link'>{{listController.flickrData.value.items[$index].link}}</div>
 				</div>
 			</div>
 		</div>

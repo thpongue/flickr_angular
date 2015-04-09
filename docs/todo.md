@@ -2,19 +2,16 @@
 	- [] list view
 		- [x] Move my FlickrDataService object to a Service
 		- [x] add load button and make clicking this button part of our integration test
-		- [] change my sample data to look like real data
-		- [] my unit tests should not care about the http object - how do I do this?
-		- [] call flickr url and store data
-		- [] update protractor code to work with aysnc data loading
-		- [] unit test without knowing about the http object - eg now I've learned I need to use jsonp my unit tests should not have to change - this has shown up a flaw in the design
+		- [x] call flickr url and store data
+		- [x] call the flickr API and display a list of results as text
+			- [x] photo url
+			- [x] post title
+			- [x] post author
+			- [x] publish data
+			- [x] link to flickr
+		- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
 		- [] name my beforeEach functions to describe what they're up to
 		- [] make url private
-		- [] call the flickr API and display a list of results as text
-			- [] photo url
-			- [] post title
-			- [] post author
-			- [] publish data
-			- [] link to flickr
 		- [] load the image
 		- [] link to detail view
 	- [] detail view
