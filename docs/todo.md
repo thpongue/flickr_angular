@@ -9,6 +9,7 @@
 			- [x] post author
 			- [x] publish data
 			- [x] link to flickr
+		- [] I've written status code without unit testing - fix this
 		- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
 		- [] name my beforeEach functions to describe what they're up to
 		- [] make url private
