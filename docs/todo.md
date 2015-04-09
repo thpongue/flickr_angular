@@ -1,64 +1,56 @@
-- [] initial project setup
-	- [x] create github repo
-	- [x] setup gulp tasks
-		- [x] basic stuff: clean, copy, watch, etc
-		- [x] integration tests (gulp-angular-protractor [with built in web driver start/stop])
-		- [x] gulp server
-		- [x] make gulp server a prerequisite of our integration tests
-		- [x] unit tests (jasmine)
-		- [x] watch should invoke the server
-		- [x] implement karma - probably not necessary to have any clever server stuff in the gulpfile which is a plus
+- [] flickr viewer
+	- [] list view
+		- [x] Move my FlickrDataService object to a Service
+		- [x] add load button and make clicking this button part of our integration test
+		- [] change my sample data to look like real data
+		- [] my unit tests should not care about the http object - how do I do this?
+		- [] call flickr url and store data
+		- [] update protractor code to work with aysnc data loading
+		- [] unit test without knowing about the http object - eg now I've learned I need to use jsonp my unit tests should not have to change - this has shown up a flaw in the design
+		- [] name my beforeEach functions to describe what they're up to
+		- [] make url private
+		- [] call the flickr API and display a list of results as text
+			- [] photo url
+			- [] post title
+			- [] post author
+			- [] publish data
+			- [] link to flickr
+		- [] load the image
+		- [] link to detail view
+	- [] detail view
+		- [] call the flickr API and display a list of results as text
+			- [] photo title
+			- [] photo author
+			- [] publish date
+			- [] photo url
+			- [] tags
+			- [] detail text
+		- [] load the image
+		- [] link back to list view
+	- [] backlog
+		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
+			- [] chrome
+			- [] firefox
+			- [] internet explorer
+			- [] safari	
+		- [] responsive
+		- [] sass
+		- [] search
+		- [] infinite load / pagination / some way of dealing with lots of content
+		- [] css and general beautification
+		- [] brainstorm other ideas
+		- [] admin
+			- [] go through the Todd Moto style guide to ensure it complies
+			- [] should my js files be in camelCase?
+			- [] start using given when then comments in my tests
 		- [] run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
-- [] list view
-	- [x] Move my FlickrDataService object to a Service
-	- [x] add load button and make clicking this button part of our integration test
-	- [] call flickr url and store data
-	- [] update protractor code to work with aysnc data loading
-	- [] unit test without knowing about the http object - eg now I've learned I need to use jsonp my unit tests should not have to change - this has shown up a flaw in the design
-	- [] name my beforeEach functions to describe what they're up to
-	- [] make url private
-	- [] call the flickr API and display a list of results as text
-		- [] photo url
-		- [] post title
-		- [] post author
-		- [] publish data
-		- [] link to flickr
-	- [] load the image
-	- [] link to detail view
-- [] detail view
-	- [] call the flickr API and display a list of results as text
-		- [] photo title
-		- [] photo author
-		- [] publish date
-		- [] photo url
-		- [] tags
-		- [] detail text
-	- [] load the image
-	- [] link back to list view
-- [] backlog
-	- [] update protractor tests to support (https://support.google.com/a/answer/33864)
-		- [] chrome
-		- [] firefox
-		- [] internet explorer
-		- [] safari	
-	- [] responsive
-	- [] sass
-	- [] search
-	- [] infinite load / pagination / some way of dealing with lots of content
-	- [] css and general beautification
-	- [] brainstorm other ideas
-	- [] admin
-		- [] go through the Todd Moto style guide to ensure it complies
-		- [] should my js files be in camelCase?
-		- [] start using given when then comments in my tests
-- [] tech debt
-	- [] build
-		- [] look into a better way of managing task dependencies
-			- [] use run-sequence
-		- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
-		- [] gulp-angular-protractor doesn't work with gulp-load-plugins
-		- [] gulp prod needed - currently only have a local build which includes the map files
-		- [] our integration task isn't clever enough to move on if the server is already running
-		- [] look into headless integration testing
-		- [] output integration test results to file (and .gitignore it)
-		- [] watch is exiting on js errors
+		- [] build
+			- [] look into a better way of managing task dependencies
+				- [] use run-sequence
+			- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
+			- [] gulp-angular-protractor doesn't work with gulp-load-plugins
+			- [] gulp prod needed - currently only have a local build which includes the map files
+			- [] our integration task isn't clever enough to move on if the server is already running
+			- [] look into headless integration testing
+			- [] output integration test results to file (and .gitignore it)
+			- [] watch is exiting on js errors
