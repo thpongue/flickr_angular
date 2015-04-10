@@ -8,8 +8,10 @@
 	function FlickrDataService($http) {
 		this.http = $http;
 		this.flickrUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK';
-
-		this.getData = function() {
+		this.getData = getData;
+		
+		// private 
+		function getData() {
 			var ret = new FlickrData();
 			this.http.jsonp(this.flickrUrl)
 				.success(function(data, status, headers, config) {
@@ -27,8 +29,10 @@
 		this.FAILURE = "FAILURE";
 		this.PENDING = "PENDING";
 		this.status = this.PENDING;
-
-		this.setValue = function(value) {
+		this.setValue = setValue;
+		
+		//private
+		function setValue(value) {
 			this.value = value;
 			this.status = value ? this.SUCCESS : this.FAILURE;
 		}
