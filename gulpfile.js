@@ -24,7 +24,7 @@ gulp.task('clean', function(cb) {
 //----------------------------------------------------------------
 var concat = require('gulp-concat');
 gulp.task('scripts', function() {
-	return gulp.src(['src/js/setup.js', 'src/js/FlickrDataService.js', 'src/js/listController.js'])
+	return gulp.src(['src/js/setup.js', 'src/js/FlickrDataFactory.js', 'src/js/listController.js'])
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('build/js/'));
 });

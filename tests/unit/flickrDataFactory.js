@@ -27,7 +27,7 @@ describe('placeholder unit test', function() {
 	});
 
 	beforeEach(inject(function ($injector) {
-		sut = $injector.get('flickrDataService');
+		sut = $injector.get('flickrDataFactory');
 	}));
 
 	it('should exist', function () {
