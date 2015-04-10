@@ -5,9 +5,10 @@
 			.controller('listController', listController)
 
 	function listController(flickrDataService) {
-		this.flickrData = null;
-		this.loadData = function() {
-			this.flickrData = flickrDataService.getData();
+		var vm = this;
+		vm.flickrData = null;
+		vm.loadData = function() {
+			vm.flickrData = flickrDataService.getData();
 		}
 	};
 
