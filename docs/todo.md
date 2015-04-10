@@ -8,6 +8,8 @@
 			- [x] post author
 			- [x] publish data
 			- [x] link to flickr
+		- [x] implement the john papa rule of 1
+		- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
 		- [] display a loading indicator
 		- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
 		- [] name my beforeEach functions to describe what they're up to

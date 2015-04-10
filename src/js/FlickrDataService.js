@@ -1,14 +1,6 @@
 (function() {
-	angular.module('app', [])
-		.controller('listController', listController)
+	angular.module('app')
 		.service('flickrDataService', FlickrDataService);
-
-	function listController(flickrDataService) {
-		this.flickrData = null;
-		this.loadData = function() {
-			this.flickrData = flickrDataService.getData();
-		}
-	};
 
 	// returns a FlickrData object which it populates once the data has arrived
 	function FlickrDataService($http) {
