@@ -1,7 +1,8 @@
 (function() {
 	'use strict';
-	angular.module('app')
-		.service('flickrDataService', FlickrDataService);
+	angular
+		.module('app')
+			.service('flickrDataService', FlickrDataService);
 
 	// returns a FlickrData object which it populates once the data has arrived
 	function FlickrDataService($http) {
