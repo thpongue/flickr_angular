@@ -3,6 +3,18 @@ describe('Item view spec', function() {
 		browser.get('http://localhost:8001');
 		element(by.css('#loadDataButton')).click();
 	});
+
+	it('should have a button to load the data', function() {
+		expect(element(by.css('#loadDataButton')).isPresent()).toBe(true);
+	});
+
+	describe('should show the word \'loading\' whilst the data is loading', function() {
+		
+	});
+	
+	describe('should show the word \'failed\' if the data fails to load', function() {
+		
+	});
 	
 	describe('should list the data for 10 flickr posts', function() {
 		var numberOfItems = 10;

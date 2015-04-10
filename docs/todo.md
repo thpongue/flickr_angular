@@ -1,15 +1,14 @@
 - [] flickr viewer
 	- [] list view
-		- [x] Move my FlickrDataService object to a Service
-		- [x] add load button and make clicking this button part of our integration test
+		- [x] button to initiate data load
 		- [x] call flickr url and store data
-		- [x] call the flickr API and display a list of results as text
+		- [x] display the data
 			- [x] photo url
 			- [x] post title
 			- [x] post author
 			- [x] publish data
 			- [x] link to flickr
-		- [] I've written status code without unit testing - fix this
+		- [] display a loading indicator
 		- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
 		- [] name my beforeEach functions to describe what they're up to
 		- [] make url private
