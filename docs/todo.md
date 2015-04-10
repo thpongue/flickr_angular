@@ -8,8 +8,14 @@
 			- [x] post author
 			- [x] publish data
 			- [x] link to flickr
-		- [x] implement the john papa rule of 1
+		- [] do through john papa style guide and implement as much as possible
 		- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
+			- [] consider artifacts rather than deliverables?
+		- [] work out if I can remove my http stuff from the unit test and rely on integration tests
+		- [] update integration tests with different stories
+			- [] make the first one just a happy path in order to encourage progress
+				- [] hence we see the progress indicator then data, rather than progress indicator then failure
+			- [] note that protractor allows us to swap out modules - use this to mess up API call when testing failure
 		- [] display a loading indicator
 		- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
 		- [] name my beforeEach functions to describe what they're up to
