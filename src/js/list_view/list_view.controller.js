@@ -4,7 +4,7 @@
 		.module('app')
 			.controller('listController', listController)
 
-	function listController(flickrDataFactory) {
+	function listController(flickrDataService) {
 		// view model
 		var vm = this;
 
@@ -14,7 +14,7 @@
 		
 		// private
 		function loadData() {
-			vm.flickrData = flickrDataFactory.getData();
+			vm.flickrData = flickrDataService.getData();
 		}
 	};
 

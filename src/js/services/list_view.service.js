@@ -2,10 +2,10 @@
 	'use strict';
 	angular
 		.module('app')
-			.factory('flickrDataFactory', flickrDataFactory);
+			.factory('flickrDataService', flickrDataService);
 
 	// returns a FlickrData object which it populates once the data has arrived
-	function flickrDataFactory($http) {
+	function flickrDataService($http) {
 		return {
 			http: $http,
 			flickrUrl: 'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK',
