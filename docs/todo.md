@@ -62,3 +62,5 @@
 			- [] output integration test results to file (and .gitignore it)
 			- [] watch is exiting on js errors
 			- [] implement ng-annotate
+			- [] evaluate sinon for test doubles (recommended by JP)
+			- [] test FlickrData
