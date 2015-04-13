@@ -9,6 +9,8 @@
 			- [x] publish data
 			- [x] link to flickr
 		- [] do through john papa style guide and implement as much as possible
+		- [] how to debug my unit tests?
+			- [] I can output to chrome but it closes instantly upon completion
 		- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
 			- [] consider artifacts rather than deliverables?
 		- [] work out if I can remove my http stuff from the unit test and rely on integration tests
@@ -59,3 +61,4 @@
 			- [] look into headless integration testing
 			- [] output integration test results to file (and .gitignore it)
 			- [] watch is exiting on js errors
+			- [] implement ng-annotate
