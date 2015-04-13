@@ -1,4 +1,4 @@
-//---------------------------------------------------------------
+//----------------------------------------------------------------
 // Include gulp
 //----------------------------------------------------------------
 var gulp = require('gulp');
@@ -34,7 +34,7 @@ gulp.task('scripts', function() {
 // copy libs
 //----------------------------------------------------------------
 gulp.task('libs', function() {
-	return gulp.src(['node_modules/angular/angular.js'])
+	return gulp.src(['node_modules/angular/angular.js', 'node_modules/angular-route/angular-route.js'])
 		.pipe(gulp.dest('build/libs/'));
 });
 

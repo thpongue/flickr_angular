@@ -1,5 +1,5 @@
 describe('Flickr viewer', function() {
-	describe('Item view spec', function() {
+	describe('List view spec', function() {
 		beforeEach(function() {
 			browser.get('http://localhost:8001');
 			element(by.css('#loadDataButton')).click();
@@ -8,15 +8,7 @@ describe('Flickr viewer', function() {
 		it('should have a button to load the data', function() {
 			expect(element(by.css('#loadDataButton')).isPresent()).toBe(true);
 		});
-
-		xit('should show the word \'loading\' whilst the data is loading', function() {
-			
-		});
-		
-		xit('should show the word \'failed\' if the data fails to load', function() {
-			
-		});
-		
+	
 		describe('should list the data for 10 flickr posts', function() {
 			var numberOfItems = 10;
 			it('should show a photo url for each item', function() {
@@ -44,6 +36,21 @@ describe('Flickr viewer', function() {
 					expect(element(by.css('#items #item'+ i +' #link')).isPresent()).toBe(true);
 				}
 			});
+		});
+
+		it('should have a link to detail view for each item in the list view', function () {
+			var numberOfItems = 10;
+			for (i=1; i<=numberOfItems;i++) {
+				expect(element(by.css('#items #item'+ i +' #detailView')).isPresent()).toBe(true);
+			}
+		});
+
+		xit('should show the word \'loading\' whilst the data is loading', function() {
+			
+		});
+		
+		xit('should show the word \'failed\' if the data fails to load', function() {
+			
 		});
 	});
 });

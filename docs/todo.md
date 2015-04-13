@@ -1,7 +1,8 @@
+- [x] split this into artifacts and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
 - [x] do through john papa style guide and implement as much as possible
-- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
-	- [] consider artifacts rather than deliverables?
-- [] display a loading indicator
+- [x] import ng-route
+- [x] update gulp file to copy it into our build dir
+- [x] update html to pull in ng-route
 - [] name my beforeEach functions to describe what they're up to
 - [] make url private
 - [] load the image
@@ -18,10 +19,7 @@
 - [] infinite load / pagination / some way of dealing with lots of content
 - [] css and general beautification
 - [] brainstorm other ideas
-- [] admin
-	- [] go through the Todd Moto style guide to ensure it complies
-	- [] should my js files be in camelCase?
-	- [] start using given when then comments in my tests
+- [] start using given when then comments in my tests
 - [] run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
 - [] build
 	- [] look into a better way of managing task dependencies

@@ -9,7 +9,7 @@
 				- [x] post author
 				- [x] publish data
 				- [x] link to flickr
-				- [] add link to get to detail view
+				- [] detail view link
 		- [] detail view
 			- [] call the flickr API and display a list of results as text
 				- [] photo title
@@ -20,3 +20,5 @@
 				- [] detail text
 			- [] load the image
 			- [] link back to list view
+	- [] iteration 2
+		- [] loading indicator
