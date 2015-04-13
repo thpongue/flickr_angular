@@ -45,6 +45,25 @@ describe('Flickr viewer', function() {
 			}
 		});
 
+		describe('should request the clicked url', function() {
+
+			beforeEach(function() {
+				browser.get('http://localhost:8001');
+				element(by.css('#loadDataButton')).click();
+			});
+
+			var numberOfItems = 10;
+			for (i=1; i<=numberOfItems;i++) {
+				it('should request the clicked url for item ' + i, function() {
+					element(by.css('#items #item'+ i +' #detailView')).click().then(function() {
+						browser.getCurrentUrl().then(function (url) {
+							expect(url).toContain('#/detail_view');
+						});
+					});
+				});
+			}
+		});
+
 		xit('should show the word \'loading\' whilst the data is loading', function() {
 			
 		});

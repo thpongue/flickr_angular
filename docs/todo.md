@@ -46,3 +46,4 @@
 		- [] make the first one just a happy path in order to encourage progress
 			- [] hence we see the progress indicator then data, rather than progress indicator then failure
 		- [] note that protractor allows us to swap out modules - use this to mess up API call when testing failure
+		- [] work out if the beforeEach of a nested describe is used instead of or as well as its parent beforeEach
