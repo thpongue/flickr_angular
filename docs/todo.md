@@ -9,17 +9,9 @@
 			- [x] publish data
 			- [x] link to flickr
 		- [x] do through john papa style guide and implement as much as possible
-		- [] how to debug my unit tests?
-			- [] I can output to chrome but it closes instantly upon completion
 		- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
 			- [] consider artifacts rather than deliverables?
-		- [] work out if I can remove my http stuff from the unit test and rely on integration tests
-		- [] update integration tests with different stories
-			- [] make the first one just a happy path in order to encourage progress
-				- [] hence we see the progress indicator then data, rather than progress indicator then failure
-			- [] note that protractor allows us to swap out modules - use this to mess up API call when testing failure
 		- [] display a loading indicator
-		- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
 		- [] name my beforeEach functions to describe what they're up to
 		- [] make url private
 		- [] load the image
@@ -69,3 +61,10 @@
 			- [] implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)
 			- [] try https://github.com/johnpapa/generator-hottowel
 			- [] can I automate the declaration of modules? (https://github.com/johnpapa/angular-styleguide#style-y400)
+			- [] how to debug my unit tests?
+				- [] I can output to chrome but it closes instantly upon completion
+			- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
+			- [] update integration tests with different stories
+				- [] make the first one just a happy path in order to encourage progress
+					- [] hence we see the progress indicator then data, rather than progress indicator then failure
+				- [] note that protractor allows us to swap out modules - use this to mess up API call when testing failure
