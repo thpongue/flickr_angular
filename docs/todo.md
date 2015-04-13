@@ -8,7 +8,7 @@
 			- [x] post author
 			- [x] publish data
 			- [x] link to flickr
-		- [] do through john papa style guide and implement as much as possible
+		- [x] do through john papa style guide and implement as much as possible
 		- [] how to debug my unit tests?
 			- [] I can output to chrome but it closes instantly upon completion
 		- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
@@ -64,3 +64,8 @@
 			- [] implement ng-annotate
 			- [] evaluate sinon for test doubles (recommended by JP)
 			- [] test FlickrData
+			- [] implement jshint (https://github.com/johnpapa/angular-styleguide#style-y230)
+			- [] implement an options file (https://github.com/johnpapa/angular-styleguide#style-y235)
+			- [] implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)
+			- [] try https://github.com/johnpapa/generator-hottowel
+			- [] can I automate the declaration of modules? (https://github.com/johnpapa/angular-styleguide#style-y400)
