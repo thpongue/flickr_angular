@@ -1,70 +1,50 @@
-- [] flickr viewer
-	- [] list view
-		- [x] button to initiate data load
-		- [x] call flickr url and store data
-		- [x] display the data
-			- [x] photo url
-			- [x] post title
-			- [x] post author
-			- [x] publish data
-			- [x] link to flickr
-		- [x] do through john papa style guide and implement as much as possible
-		- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
-			- [] consider artifacts rather than deliverables?
-		- [] display a loading indicator
-		- [] name my beforeEach functions to describe what they're up to
-		- [] make url private
-		- [] load the image
-		- [] link to detail view
-	- [] detail view
-		- [] call the flickr API and display a list of results as text
-			- [] photo title
-			- [] photo author
-			- [] publish date
-			- [] photo url
-			- [] tags
-			- [] detail text
-		- [] load the image
-		- [] link back to list view
-	- [] backlog
-		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
-			- [] chrome
-			- [] firefox
-			- [] internet explorer
-			- [] safari	
-		- [] responsive
-		- [] sass
-		- [] search
-		- [] infinite load / pagination / some way of dealing with lots of content
-		- [] css and general beautification
-		- [] brainstorm other ideas
-		- [] admin
-			- [] go through the Todd Moto style guide to ensure it complies
-			- [] should my js files be in camelCase?
-			- [] start using given when then comments in my tests
-		- [] run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
-		- [] build
-			- [] look into a better way of managing task dependencies
-				- [] use run-sequence
-			- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
-			- [] gulp-angular-protractor doesn't work with gulp-load-plugins
-			- [] gulp prod needed - currently only have a local build which includes the map files
-			- [] our integration task isn't clever enough to move on if the server is already running
-			- [] look into headless integration testing
-			- [] output integration test results to file (and .gitignore it)
-			- [] watch is exiting on js errors
-			- [] implement ng-annotate
-			- [] evaluate sinon for test doubles (recommended by JP)
-			- [] test FlickrData
-			- [] implement jshint (https://github.com/johnpapa/angular-styleguide#style-y230)
-			- [] implement an options file (https://github.com/johnpapa/angular-styleguide#style-y235)
-			- [] implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)
-			- [] try https://github.com/johnpapa/generator-hottowel
-			- [] can I automate the declaration of modules? (https://github.com/johnpapa/angular-styleguide#style-y400)
-			- [] how to debug my unit tests?
-				- [] I can output to chrome but it closes instantly upon completion
-			- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
-			- [] update integration tests with different stories
-				- [] make the first one just a happy path in order to encourage progress
-					- [] hence we see the progress indicator then data, rather than progress indicator then failure
-				- [] note that protractor allows us to swap out modules - use this to mess up API call when testing failure
+- [x] do through john papa style guide and implement as much as possible
+- [] split this into deliverables and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
+	- [] consider artifacts rather than deliverables?
+- [] display a loading indicator
+- [] name my beforeEach functions to describe what they're up to
+- [] make url private
+- [] load the image
+- [] link to detail view
+- [] backlog
+- [] update protractor tests to support (https://support.google.com/a/answer/33864)
+	- [] chrome
+	- [] firefox
+	- [] internet explorer
+	- [] safari	
+- [] responsive
+- [] sass
+- [] search
+- [] infinite load / pagination / some way of dealing with lots of content
+- [] css and general beautification
+- [] brainstorm other ideas
+- [] admin
+	- [] go through the Todd Moto style guide to ensure it complies
+	- [] should my js files be in camelCase?
+	- [] start using given when then comments in my tests
+- [] run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
+- [] build
+	- [] look into a better way of managing task dependencies
+		- [] use run-sequence
+	- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
+	- [] gulp-angular-protractor doesn't work with gulp-load-plugins
+	- [] gulp prod needed - currently only have a local build which includes the map files
+	- [] our integration task isn't clever enough to move on if the server is already running
+	- [] look into headless integration testing
+	- [] output integration test results to file (and .gitignore it)
+	- [] watch is exiting on js errors
+	- [] implement ng-annotate
+	- [] evaluate sinon for test doubles (recommended by JP)
+	- [] test FlickrData
+	- [] implement jshint (https://github.com/johnpapa/angular-styleguide#style-y230)
+	- [] implement an options file (https://github.com/johnpapa/angular-styleguide#style-y235)
+	- [] implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)
+	- [] try https://github.com/johnpapa/generator-hottowel
+	- [] can I automate the declaration of modules? (https://github.com/johnpapa/angular-styleguide#style-y400)
+	- [] how to debug my unit tests?
+		- [] I can output to chrome but it closes instantly upon completion
+	- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
+	- [] update integration tests with different stories
+		- [] make the first one just a happy path in order to encourage progress
+			- [] hence we see the progress indicator then data, rather than progress indicator then failure
+		- [] note that protractor allows us to swap out modules - use this to mess up API call when testing failure
