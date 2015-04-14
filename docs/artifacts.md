@@ -13,12 +13,12 @@
 				- [x] detail view link
 		- [] detail view
 			- [x] can navigate to page
-			- [] back button navigating back to list view
+			- [x] back button navigating back to list view
 			- [] show
+				- [] photo url
 				- [] photo title
 				- [] photo author
 				- [] publish date
-				- [] photo url
 				- [] tags
 				- [] detail text
 			- [] load the image

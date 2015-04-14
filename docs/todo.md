@@ -4,6 +4,8 @@
 - [x] update gulp file to copy it into our build dir
 - [x] update html to pull in ng-route
 - [x] link to detail view
+- [x] tell gulp to ignore my spec files (they're being added to app.js)
+- [x] pass index from route to detail view
 - [] name my beforeEach functions to describe what they're up to
 - [] make url private
 - [] load the image

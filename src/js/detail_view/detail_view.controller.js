@@ -4,7 +4,9 @@
 		.module('app')
 			.controller('detail_view_controller', detailViewController)
 
-	function detailViewController(flickrDataService) {
+	function detailViewController(flickrDataService, $routeParams) {
+		this.index = $routeParams.index;
+
 		// view model
 		var vm = this;
 

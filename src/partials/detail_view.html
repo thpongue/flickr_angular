@@ -1,4 +1,8 @@
 <div ng-controller='detail_view_controller as ctrl'>
-	<p>Detail View</p>
+	<p>Detail View for index: {{ctrl.index}}</p>
 	<a id='listView' href='#list_view'>Back to list view</a>
+	<div id='media'>{{ctrl.flickrData.value.items[$index].media.m}}</div>
+	<div id='title'>{{ctrl.flickrData.value.items[$index].title}}</div>
+	<div id='author'>{{ctrl.flickrData.value.items[$index].author}}</div>
+	<div id='date_taken'>{{ctrl.flickrData.value.items[$index].date_taken}}</div>
 </div>
