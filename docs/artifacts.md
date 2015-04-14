@@ -1,6 +1,7 @@
 - [] flickr viewer
 	- [] iteration 1
 		- [x] list view
+			- [x] can navigate to page
 			- [x] button to initiate data load
 			- [x] call flickr url and store data
 			- [x] display the data
@@ -9,9 +10,10 @@
 				- [x] post author
 				- [x] publish data
 				- [x] link to flickr
-				- [] detail view link
+				- [x] detail view link
 		- [] detail view
-			- [] call the flickr API and display a list of results as text
+			- [x] can navigate to page
+			- [] show
 				- [] photo title
 				- [] photo author
 				- [] publish date
