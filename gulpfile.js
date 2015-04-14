@@ -23,8 +23,10 @@ gulp.task('clean', function(cb) {
 // process scripts
 //----------------------------------------------------------------
 var concat = require('gulp-concat');
+var gulpIgnore = require('gulp-ignore');
 gulp.task('scripts', function() {
 	return gulp.src(['src/js/setup.js', 'src/js/**/*.js'])
+		.pipe(gulpIgnore.exclude('*.spec.js'))
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('build/js/'));
 });
