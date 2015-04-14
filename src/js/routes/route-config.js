@@ -7,11 +7,11 @@
 	function router($routeProvider) {
 		$routeProvider
 			.when('/', {
-				controller: 'listController',
+				controller: 'list_view_controller',
 				templateUrl: 'partials/list_view.html'
 			})
 			.when('/detail_view/:index', {
-				controller: 'someControllerMethod',
+				controller: 'detail_view_controller',
 				templateUrl: 'partials/detail_view.html'
 			})
 			.otherwise({

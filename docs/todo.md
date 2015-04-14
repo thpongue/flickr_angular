@@ -3,11 +3,10 @@
 - [x] import ng-route
 - [x] update gulp file to copy it into our build dir
 - [x] update html to pull in ng-route
+- [x] link to detail view
 - [] name my beforeEach functions to describe what they're up to
 - [] make url private
 - [] load the image
-- [] link to detail view
-- [] backlog
 - [] update protractor tests to support (https://support.google.com/a/answer/33864)
 	- [] chrome
 	- [] firefox

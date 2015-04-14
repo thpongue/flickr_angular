@@ -1,12 +1,12 @@
-<div ng-controller='listController as listController'>
-	<input id='loadDataButton' type='button' value='load data' ng-click='listController.loadData()'></input>
-	<div id='items' ng-repeat='item in listController.flickrData.value.items'>
+<div ng-controller='list_view_controller as ctrl'>
+	<input id='loadDataButton' type='button' value='load data' ng-click='ctrl.loadData()'></input>
+	<div id='items' ng-repeat='item in ctrl.flickrData.value.items'>
 		<div id='item{{$index+1}}'>
-			<div id='media'>{{listController.flickrData.value.items[$index].media.m}}</div>
-			<div id='title'>{{listController.flickrData.value.items[$index].title}}</div>
-			<div id='author'>{{listController.flickrData.value.items[$index].author}}</div>
-			<div id='date_taken'>{{listController.flickrData.value.items[$index].date_taken}}</div>
-			<div id='link'>{{listController.flickrData.value.items[$index].link}}</div>
+			<div id='media'>{{ctrl.flickrData.value.items[$index].media.m}}</div>
+			<div id='title'>{{ctrl.flickrData.value.items[$index].title}}</div>
+			<div id='author'>{{ctrl.flickrData.value.items[$index].author}}</div>
+			<div id='date_taken'>{{ctrl.flickrData.value.items[$index].date_taken}}</div>
+			<div id='link'>{{ctrl.flickrData.value.items[$index].link}}</div>
 			<a id='detailView' href='#detail_view/{{$index}}'>Go to detail view</a>
 			<p>----</p>
 		</div>

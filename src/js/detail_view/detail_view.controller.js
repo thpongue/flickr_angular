@@ -2,9 +2,9 @@
 	'use strict';
 	angular
 		.module('app')
-			.controller('list_view_controller', listViewController)
+			.controller('detail_view_controller', detailViewController)
 
-	function listViewController(flickrDataService) {
+	function detailViewController(flickrDataService) {
 		// view model
 		var vm = this;
 

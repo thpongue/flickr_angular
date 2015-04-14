@@ -5,40 +5,40 @@ describe('Flickr viewer', function() {
 			element(by.css('#loadDataButton')).click();
 		});
 
-		it('should have a button to load the data', function() {
+		xit('should have a button to load the data', function() {
 			expect(element(by.css('#loadDataButton')).isPresent()).toBe(true);
 		});
 	
 		describe('should list the data for 10 flickr posts', function() {
 			var numberOfItems = 10;
-			it('should show a photo url for each item', function() {
+			xit('should show a photo url for each item', function() {
 				for (i=1; i<=numberOfItems;i++) {
 					expect(element(by.css('#items #item'+ i +' #media')).isPresent()).toBe(true);
 				}
 			});
-			it('should show a post title for each item', function() {
+			xit('should show a post title for each item', function() {
 				for (i=1; i<=numberOfItems;i++) {
 					expect(element(by.css('#items #item'+ i +' #title')).isPresent()).toBe(true);
 				}
 			});
-			it('should show a post author for each item', function() {
+			xit('should show a post author for each item', function() {
 				for (i=1; i<=numberOfItems;i++) {
 					expect(element(by.css('#items #item'+ i +' #author')).isPresent()).toBe(true);
 				}
 			});
-			it('should show a publish date for each item', function() {
+			xit('should show a publish date for each item', function() {
 				for (i=1; i<=numberOfItems;i++) {
 					expect(element(by.css('#items #item'+ i +' #date_taken')).isPresent()).toBe(true);
 				}
 			});
-			it('should show a flickr link for each item', function() {
+			xit('should show a flickr link for each item', function() {
 				for (i=1; i<=numberOfItems;i++) {
 					expect(element(by.css('#items #item'+ i +' #link')).isPresent()).toBe(true);
 				}
 			});
 		});
 
-		it('should have a link to detail view for each item in the list view', function () {
+		xit('should have a link to detail view for each item in the list view', function () {
 			var numberOfItems = 10;
 			for (i=1; i<=numberOfItems;i++) {
 				expect(element(by.css('#items #item'+ i +' #detailView')).isPresent()).toBe(true);
@@ -54,7 +54,7 @@ describe('Flickr viewer', function() {
 
 			var numberOfItems = 10;
 			for (i=1; i<=numberOfItems;i++) {
-				it('should request the clicked url for item ' + i, function() {
+				xit('should request the clicked url for item ' + i, function() {
 					element(by.css('#items #item'+ i +' #detailView')).click().then(function() {
 						browser.getCurrentUrl().then(function (url) {
 							expect(url).toContain('#/detail_view');

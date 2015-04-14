@@ -13,6 +13,7 @@
 				- [x] detail view link
 		- [] detail view
 			- [x] can navigate to page
+			- [] back button navigating back to list view
 			- [] show
 				- [] photo title
 				- [] photo author
