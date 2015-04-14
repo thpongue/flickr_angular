@@ -49,6 +49,15 @@ gulp.task('html', function() {
 
 
 //----------------------------------------------------------------
+// copy partials
+//----------------------------------------------------------------
+gulp.task('partials', function() {
+	return gulp.src('src/partials/*.html')
+		.pipe(gulp.dest('build/partials/'));
+});
+
+
+//----------------------------------------------------------------
 // copy css
 //----------------------------------------------------------------
 gulp.task('css', function() {
@@ -160,7 +169,7 @@ gulp.task('tests', ["localBuild"], function() {
 
 // local build
 gulp.task('localBuild', ['clean'], function() {
-	gulp.start('scripts', 'libs', 'css', 'html');
+	gulp.start('scripts', 'libs', 'css', 'html', 'partials');
 });
 
 // build then unit tests

@@ -11,19 +11,6 @@
 		<script src='js/app.js'></script>
 	</head>
 	<body ng-app='app'>
-		<div ng-controller='listController as listController'>
-			<input id='loadDataButton' type='button' value='load data' ng-click='listController.loadData()'></input>
-			<div id='items' ng-repeat='item in listController.flickrData.value.items'>
-				<div id='item{{$index+1}}'>
-					<div id='media'>{{listController.flickrData.value.items[$index].media.m}}</div>
-					<div id='title'>{{listController.flickrData.value.items[$index].title}}</div>
-					<div id='author'>{{listController.flickrData.value.items[$index].author}}</div>
-					<div id='date_taken'>{{listController.flickrData.value.items[$index].date_taken}}</div>
-					<div id='link'>{{listController.flickrData.value.items[$index].link}}</div>
-					<input id='detailView' type='button' value='launch content' ng-click='listController.loadData()'></input>
-					<p>----</p>
-				</div>
-			</div>
-		</div>
+		<div ng-view></div>
 	</body>
 </html>
