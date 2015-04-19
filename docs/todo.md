@@ -8,9 +8,10 @@
 - [x] pass index from route to detail view
 - [] implement protractor-http-mock and pass in some mocked data to my integration test
 	- [x] update protractor.conf.js so that it works via gulp and when called directly
-	- [] get a simple call working
-	- [] get it working with our flickr api call
-	- [] get that returning jsonp
+	- [x] get a simple call working
+	- [] get a simple call working from the service
+	- [] get a more complex call working (ie to the flickr api on a different server)
+	- [] get our flickr api call returning mocked data (jsonp)
 - [] rename list view service to flickr data service (since the data is shared by all views)
 - [] be able to swap out the start of the url so I can integration test pointing to a local json file
 - [] list_view_service provides data for the whole app (and is a singleton which means even if it doesn't, it can) so rename to flickr_data
