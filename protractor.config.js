@@ -1,10 +1,16 @@
 // conf.js
 exports.config = {
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+ 	baseUrl: 'http://localhost:8001/',
 	specs: [
-		'tests/integration/**/*.js'
+		'integration_tests/**/*.js'
 	],  
   capabilities: {
     browserName: 'chrome'
-  }
+  },
+	onPrepare: function(){
+		require('protractor-http-mock').config = {
+			rootDirectory: __dirname,
+			protractorConfig: 'protractor.config.js'
+		}
+	}
 }
