@@ -6,6 +6,14 @@
 - [x] link to detail view
 - [x] tell gulp to ignore my spec files (they're being added to app.js)
 - [x] pass index from route to detail view
+- [] implement protractor-http-mock and pass in some mocked data to my integration test
+	- [x] update protractor.conf.js so that it works via gulp and when called directly
+	- [] get a simple call working
+	- [] get it working with our flickr api call
+	- [] get that returning jsonp
+- [] rename list view service to flickr data service (since the data is shared by all views)
+- [] be able to swap out the start of the url so I can integration test pointing to a local json file
+- [] list_view_service provides data for the whole app (and is a singleton which means even if it doesn't, it can) so rename to flickr_data
 - [] name my beforeEach functions to describe what they're up to
 - [] make url private
 - [] load the image
