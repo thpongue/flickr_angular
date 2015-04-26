@@ -2,7 +2,7 @@
 exports.config = {
  	baseUrl: 'http://localhost:8001/',
 	specs: [
-		'integration_tests/**/*.js'
+		'e2e/**/*.js'
 	],  
   capabilities: {
     browserName: 'chrome'

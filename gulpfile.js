@@ -69,7 +69,7 @@ gulp.task('css', function() {
 
 
 //----------------------------------------------------------------
-// integration tests (webdriver and protractor)
+// e2e tests (webdriver and protractor)
 //----------------------------------------------------------------
 var gprotractor = require('gulp-protractor');
 
@@ -88,8 +88,8 @@ gulp.task('webdriver_update', webdriver_update);
 // Start the standalone selenium server
 gulp.task('webdriver_standalone', webdriver_standalone);
 
-// main integration task - run protractor then stop server
-gulp.task('integration', ["stop_server"], function(cb) {
+// main e2e task - run protractor then stop server
+gulp.task('e2e', ["stop_server"], function(cb) {
 });
 
 // stop server once protractor has run
@@ -100,7 +100,7 @@ gulp.task('stop_server', ["protractor"], function() {
 // start server then run protractor
 gulp.task('protractor', ['start_server_port_8001'], function(cb) {
 	gulp
-		.src(['integration_tests/**/*.js'])
+		.src(['e2e/**/*.js'])
 		.pipe(gulpProtractorAngular({
 			'configFile': 'protractor.config.js',
 			'debug': false,
@@ -166,7 +166,7 @@ gulp.task('watch', ['start_server_port_8000'], function() {
 //----------------------------------------------------------------
 // tests
 gulp.task('tests', ["localBuild"], function() {
-	gulp.start('integration', 'unit');
+	gulp.start('e2e', 'unit');
 });
 
 // local build
