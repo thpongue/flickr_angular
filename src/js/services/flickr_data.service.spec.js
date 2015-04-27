@@ -1,4 +1,4 @@
-describe('placeholder unit test', function() {
+describe('list view service', function() {
 	var sut = null;
 	var flickrUrl = 'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK';
 	var mock;
@@ -26,8 +26,8 @@ describe('placeholder unit test', function() {
 		});
 	});
 
-	beforeEach(inject(function ($injector) {
-		sut = $injector.get('flickrDataService');
+	beforeEach(inject(function (flickrDataService) {
+		sut = flickrDataService;
 	}));
 
 	it('should exist', function () {
