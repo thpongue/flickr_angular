@@ -6,7 +6,8 @@
 - [x] link to detail view
 - [x] tell gulp to ignore my spec files (they're being added to app.js)
 - [x] pass index from route to detail view
-- [] remove protractor-http-mock - change use from integration to pure e2e smoke test
+- [x] remove protractor-http-mock - change use from integration to pure e2e smoke test
+- [x] change e2e layout so that its not functional (by page) but a set of scenario's that together give us a good smoke test for the app
 - [] add integration tests
 - [] rename list view service to flickr data service (since the data is shared by all views)
 - [] be able to swap out the start of the url so I can integration test pointing to a local json file
