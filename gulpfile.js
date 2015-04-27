@@ -100,7 +100,7 @@ gulp.task('stop_server', ["protractor"], function() {
 // start server then run protractor
 gulp.task('protractor', ['start_server_port_8001'], function(cb) {
 	gulp
-		.src(['e2e/**/*.js'])
+		.src(['use the contents of protractor.config.js'])
 		.pipe(gulpProtractorAngular({
 			'configFile': 'protractor.config.js',
 			'debug': false,
