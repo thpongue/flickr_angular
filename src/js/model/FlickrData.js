@@ -3,6 +3,7 @@ function FlickrData() {
 	this.FAILURE = "FAILURE";
 	this.PENDING = "PENDING";
 	this.status = this.PENDING;
+	this.value = null;
 	this.setValue = setValue;
 	
 	//private

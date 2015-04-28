@@ -1,56 +1,29 @@
-- [x] split this into artifacts and todo - deliverables should be something I can generate from the code. Deliverables are nouns, todo's are verbs
-- [x] do through john papa style guide and implement as much as possible
-- [x] import ng-route
-- [x] update gulp file to copy it into our build dir
-- [x] update html to pull in ng-route
-- [x] link to detail view
-- [x] tell gulp to ignore my spec files (they're being added to app.js)
-- [x] pass index from route to detail view
-- [x] remove protractor-http-mock - change use from integration to pure e2e smoke test
-- [x] change e2e layout so that its not functional (by page) but a set of scenario's that together give us a good smoke test for the app
-- [] add integration tests
-- [] rename list view service to flickr data service (since the data is shared by all views)
-- [] be able to swap out the start of the url so I can integration test pointing to a local json file
-- [] list_view_service provides data for the whole app (and is a singleton which means even if it doesn't, it can) so rename to flickr_data
-- [] name my beforeEach functions to describe what they're up to
-- [] make url private
-- [] load the image
-- [] update protractor tests to support (https://support.google.com/a/answer/33864)
-	- [] chrome
-	- [] firefox
-	- [] internet explorer
-	- [] safari	
-- [] responsive
-- [] sass
-- [] search
-- [] infinite load / pagination / some way of dealing with lots of content
-- [] css and general beautification
-- [] brainstorm other ideas
-- [] start using given when then comments in my tests
-- [] run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
-- [] build
-	- [] look into a better way of managing task dependencies
-		- [] use run-sequence
-	- [] gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
-	- [] gulp-angular-protractor doesn't work with gulp-load-plugins
-	- [] gulp prod needed - currently only have a local build which includes the map files
-	- [] our integration task isn't clever enough to move on if the server is already running
-	- [] look into headless integration testing
-	- [] output integration test results to file (and .gitignore it)
-	- [] watch is exiting on js errors
-	- [] implement ng-annotate
-	- [] evaluate sinon for test doubles (recommended by JP)
-	- [] test FlickrData
-	- [] implement jshint (https://github.com/johnpapa/angular-styleguide#style-y230)
-	- [] implement an options file (https://github.com/johnpapa/angular-styleguide#style-y235)
-	- [] implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)
-	- [] try https://github.com/johnpapa/generator-hottowel
-	- [] can I automate the declaration of modules? (https://github.com/johnpapa/angular-styleguide#style-y400)
-	- [] how to debug my unit tests?
-		- [] I can output to chrome but it closes instantly upon completion
-	- [] my unit tests are brittle (I'm faking up an http object) - consider alternative approaches
-	- [] update integration tests with different stories
-		- [] make the first one just a happy path in order to encourage progress
-			- [] hence we see the progress indicator then data, rather than progress indicator then failure
-		- [] note that protractor allows us to swap out modules - use this to mess up API call when testing failure
-		- [] work out if the beforeEach of a nested describe is used instead of or as well as its parent beforeEach
+- load the image
+- update protractor tests to support (https://support.google.com/a/answer/33864)
+	- chrome
+	- firefox
+	- internet explorer
+	- safari	
+- responsive
+- sass
+- search
+- infinite load / pagination / some way of dealing with lots of content
+- css and general beautification
+- brainstorm other ideas
+- start using given when then comments in my tests
+- run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
+- build
+	- look into a better way of managing task dependencies
+		- use run-sequence
+	- gulp clean is deprecated but the recommended gulp-del doesn't work with our handy gulp-load-plugins. Find an alternative
+	- gulp-angular-protractor doesn't work with gulp-load-plugins
+	- gulp prod needed - currently only have a local build which includes the map files
+	- look into headless integration testing
+	- output integration test results to file (and .gitignore it)
+	- watch is exiting on js errors
+	- implement ng-annotate
+	- implement jshint (https://github.com/johnpapa/angular-styleguide#style-y230)
+	- implement an options file (https://github.com/johnpapa/angular-styleguide#style-y235)
+	- implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)
+	- try https://github.com/johnpapa/generator-hottowel
+	- can I automate the declaration of modules? (https://github.com/johnpapa/angular-styleguide#style-y400)
