@@ -1,5 +1,5 @@
 describe('the user enters the site via the list page, loads the data and selects the 5th item, views it in the detail page then goes back to the list page ', function() {
-	it('should successfully navigate to from the list view to the detail view and back', function() {
+	it('should successfully navigate to from the list view to the detail view and back, detail view should contain additional tags and description', function() {
 		browser.get('http://localhost:8001');
 		element(by.css('#loadDataButton')).click().then(function() {
 
@@ -22,6 +22,7 @@ describe('the user enters the site via the list page, loads the data and selects
 								element(by.css('#items #item5 #detailView')).click().then(function() {
 									browser.getCurrentUrl().then(function (url) {
 										expect(url).toContain('#/detail_view');
+										// these should match what we found on the list page
 										element(by.css('#media')).getText().then(function(text) {
 											expect(text).toEqual(original_media);			
 										});
@@ -37,6 +38,14 @@ describe('the user enters the site via the list page, loads the data and selects
 										element(by.css('#link')).getText().then(function(text) {
 											expect(text).toEqual(original_link);			
 										});
+										// these aren't on the list page but should be present
+										element(by.css('#tags')).getText().then(function(text) {
+											expect(text).not.toBe("");
+										});
+										element(by.css('#description')).getText().then(function(text) {
+											expect(text).not.toBe("");
+										});
+										
 										element(by.css('#listView')).click().then(function() {
 											browser.getCurrentUrl().then(function (url) {
 												expect(url).toBe('http://localhost:8001/#/');

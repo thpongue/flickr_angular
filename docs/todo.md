@@ -1,4 +1,5 @@
 - load the image
+- dynamically add the html stored in the description tag - can i create a directive on the fly?
 - update protractor tests to support (https://support.google.com/a/answer/33864)
 	- chrome
 	- firefox
