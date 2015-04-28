@@ -1,5 +1,5 @@
 - [] flickr viewer
-	- [x] iteration 1
+	- [x] iteration 1 - mvp
 		- [x] list view
 			- [x] can navigate to page
 			- [x] button to initiate data load
@@ -25,5 +25,16 @@
 				- [x] detail text
 			- [x] link back to list view
 			- [x] load the image
-	- [] iteration 2
+	- [] iteration 2 - improved layout for list view
+		- [] get the layout looking a little more like the wireframes and a little less like a list
+	- [] iteration 3 - improved layout for detail view
+		- [] get the layout looking a little more like the wireframes and a little less like a list
+		- [] write the loaded description html to the page rather than as text
+		- [] turn tags into clickable searches
+	- [] iteration 4 - managing data load
+		- [] remove load data button and load data automatically instead
+		- [] when clicking back from detail view to list view persist the data
+		- [] if the user goes directly to the detail view give a friendly message to say that no entry has been selected
+	- [] iteration x (to sort)
 		- [] loading indicator
+		- [] responsive
