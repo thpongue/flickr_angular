@@ -9,7 +9,8 @@ describe('the user enters the site via the list page, loads the data and selects
 			var original_date_taken;
 			var original_link;
 
-			element(by.css('#items #item5 #media')).getText().then(function(text){
+			element(by.css('#items #item5 img#media')).getAttribute('src').then(function(text){
+				console.log("text = " + text);
 				original_media = text;
 				element(by.css('#items #item5 #title')).getText().then(function(text){
 					original_title = text;
@@ -23,7 +24,7 @@ describe('the user enters the site via the list page, loads the data and selects
 									browser.getCurrentUrl().then(function (url) {
 										expect(url).toContain('#/detail_view');
 										// these should match what we found on the list page
-										element(by.css('#media')).getText().then(function(text) {
+										element(by.css('img#media')).getAttribute('src').then(function(text) {
 											expect(text).toEqual(original_media);			
 										});
 										element(by.css('#title')).getText().then(function(text) {

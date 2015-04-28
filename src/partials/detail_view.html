@@ -1,5 +1,5 @@
 <div ng-controller='detail_view_controller as ctrl'>
-	<div id='media'>{{ctrl.flickrData.value.items[ctrl.index].media.m}}</div>
+	<img id='media' ng-src='{{ctrl.flickrData.value.items[ctrl.index].media.m}}'>
 	<div id='title'>{{ctrl.flickrData.value.items[ctrl.index].title}}</div>
 	<div id='author'>{{ctrl.flickrData.value.items[ctrl.index].author}}</div>
 	<div id='date_taken'>{{ctrl.flickrData.value.items[ctrl.index].date_taken}}</div>

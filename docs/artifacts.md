@@ -1,6 +1,6 @@
 - [] flickr viewer
-	- [] iteration 1
-		- [] list view
+	- [x] iteration 1
+		- [x] list view
 			- [x] can navigate to page
 			- [x] button to initiate data load
 			- [x] call flickr url and store data
@@ -11,8 +11,8 @@
 				- [x] publish data
 				- [x] link to flickr
 				- [x] detail view link
-			- [] load the image
-		- [] detail view
+			- [x] load the image
+		- [x] detail view
 			- [x] can navigate to page
 			- [x] back button navigating back to list view
 			- [x] show
@@ -24,6 +24,6 @@
 				- [x] tags
 				- [x] detail text
 			- [x] link back to list view
-			- [] load the image
+			- [x] load the image
 	- [] iteration 2
 		- [] loading indicator
