@@ -25,8 +25,8 @@
 				- [x] detail text
 			- [x] link back to list view
 			- [x] load the image
-	- [] iteration 2 - improved layout for list view
-		- [] get the layout looking a little more like the wireframes and a little less like a list
+	- [x] iteration 2 - improved layout for list view
+		- [x] get the layout looking a little more like the wireframes and a little less like a list
 	- [] iteration 3 - improved layout for detail view
 		- [] get the layout looking a little more like the wireframes and a little less like a list
 		- [] write the loaded description html to the page rather than as text
