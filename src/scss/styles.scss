@@ -1,0 +1,35 @@
+$itemWidth : 1100px;
+$mediaWidth : 300px;
+$gap : 50px;
+$itemTextWidth : $itemWidth - $mediaWidth - $gap;
+
+html *
+{
+	font-size: 14px !important;
+	color: #000 !important;
+	font-family: Arial !important;
+}
+
+.item {
+	width: $itemWidth;
+	position: relative;
+	clear: left;
+	padding: 20px 20px 20px 20px;
+}
+
+.media {
+	float: left;
+	width: $mediaWidth;
+}
+
+.item_text {
+	float: right;
+	width: $itemTextWidth;
+	word-wrap: break-word;
+}
+
+#title {
+	font-weight: bold;
+	padding-bottom: 20px;
+	display: block;
+}
