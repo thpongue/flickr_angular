@@ -36,5 +36,7 @@
 		- [] when clicking back from detail view to list view persist the data
 		- [] if the user goes directly to the detail view give a friendly message to say that no entry has been selected
 	- [] iteration x (to sort)
+		- [] we don't have a direct link to the author but there probably is a way of doing this via their api - take a look
+		- [] extract the part of the user name in brackets and link to the part of the user name before the brackets
 		- [] loading indicator
 		- [] responsive

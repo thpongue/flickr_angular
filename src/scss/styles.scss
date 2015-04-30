@@ -1,8 +1,3 @@
-$itemWidth : 1100px;
-$mediaWidth : 300px;
-$gap : 50px;
-$itemTextWidth : $itemWidth - $mediaWidth - $gap;
-
 html *
 {
 	font-size: 14px;
@@ -10,31 +5,98 @@ html *
 	font-family: Arial;
 }
 
-.item {
-	width: $itemWidth;
-	position: relative;
-	clear: left;
-	padding: 20px 20px 20px 20px;
+/*list view*/
+$list_view_itemWidth : 1100px;
+$list_view_mediaWidth : 300px;
+$list_view_gap : 50px;
+$list_view_itemTextWidth : $list_view_itemWidth - $list_view_mediaWidth - $list_view_gap;
+
+#list_view {
+	.item {
+		width: $list_view_itemWidth;
+		position: relative;
+		clear: left;
+		padding: 20px 20px 20px 20px;
+	}
+
+	.media {
+		float: left;
+		width: $list_view_mediaWidth;
+	}
+
+	.item_text {
+		float: right;
+		width: $list_view_itemTextWidth;
+		word-wrap: break-word;
+	}
+
+	#title {
+		font-weight: bold;
+		font-size: 20px;
+		padding-bottom: 20px;
+		display: block;
+	}
+
+	#author, #date_taken {
+		margin-right: 20px;
+	}
 }
 
-.media {
-	float: left;
-	width: $mediaWidth;
-}
+/*detail view*/
+$detail_view_bodyWidth : 1100px;
+$detail_view_mediaWidth : 300px;
+$detail_view_gap : 50px;
+$detail_view_detail_text_width : $detail_view_bodyWidth - $detail_view_mediaWidth - $detail_view_gap;
+#detail_view {
+	#title {
+		float: left;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	
+	#listView {
+		float: right;
+	}
 
-.item_text {
-	float: right;
-	width: $itemTextWidth;
-	word-wrap: break-word;
-}
+	#detail_header {
+		position: relative;
+		display: block;
+		padding-bottom: 10px;
+		height: 30px;
+		width: $detail_view_bodyWidth;
+	}
 
-#title {
-	font-weight: bold;
-	font-size: 20px;
-	padding-bottom: 20px;
-	display: block;
-}
+	#detail_sub_header {
+		position: relative;
+		display: block;
+		padding-bottom: 10px;
+		height: 30px;
+	}
 
-#author, #date_taken {
-	margin-right: 20px;
+	#detail_body {
+		width: $detail_view_bodyWidth;
+		position: relative;
+		display: block;
+		overflow:auto; 
+	}
+	
+	#author {
+		margin-right: 20px;
+	}	
+
+	#media {
+		float: left;
+	}
+
+	#description {
+		position: absolute;
+		left: $detail_view_mediaWidth;
+		width: $detail_view_detail_text_width;
+	}
+
+	#tags {
+		position:absolute;
+		left:$detail_view_mediaWidth;
+		bottom:0px;
+	}
 }

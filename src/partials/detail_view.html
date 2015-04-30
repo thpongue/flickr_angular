@@ -1,10 +1,15 @@
-<div ng-controller='detail_view_controller as ctrl'>
-	<img id='media' ng-src='{{ctrl.flickrData.value.items[ctrl.index].media.m}}'>
-	<div id='title'>{{ctrl.flickrData.value.items[ctrl.index].title}}</div>
-	<div id='author'>{{ctrl.flickrData.value.items[ctrl.index].author}}</div>
-	<div id='date_taken'>{{ctrl.flickrData.value.items[ctrl.index].date_taken}}</div>
-	<div id='link'>{{ctrl.flickrData.value.items[ctrl.index].link}}</div>
-	<div id='tags'>{{ctrl.flickrData.value.items[ctrl.index].tags}}</div>
-	<div id='description'>{{ctrl.flickrData.value.items[ctrl.index].description}}</div>
-	<a id='listView' href='#list_view'>Back to list view</a>
-</div>
+<section id='detail_view' ng-controller='detail_view_controller as ctrl'>
+	<section id='detail_header'>
+		<a href='{{ctrl.flickrData.value.items[ctrl.index].link}}' id='title'>{{ctrl.flickrData.value.items[ctrl.index].title}}</span>
+		<a id='listView' href='#list_view'>Back to list view</a>
+	</section>
+	<section id='detail_sub_header'>
+		<span id='author'>{{ctrl.flickrData.value.items[ctrl.index].author}}</span>
+		<span id='date_taken'>{{ctrl.flickrData.value.items[ctrl.index].date_taken | date:"dd MMMM yyyy 'at' h:mma"}}</span>
+	</section>
+	<section id='detail_body'>
+		<img id='media' ng-src='{{ctrl.flickrData.value.items[ctrl.index].media.m}}'>
+		<span id='description'>{{ctrl.flickrData.value.items[ctrl.index].description}}</span>
+		<span id='tags'>Tags: {{ctrl.flickrData.value.items[ctrl.index].tags}}</span>
+	</section>
+</section>

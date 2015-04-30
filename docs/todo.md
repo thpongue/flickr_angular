@@ -11,6 +11,8 @@
 - brainstorm other ideas
 - start using given when then comments in my tests
 - run integration tests in jasmine within watch but run in a browser on request (maybe multiple browsers?)
+- validate the code
+- alt for images
 - build
 	- look into a better way of managing task dependencies
 		- use run-sequence
