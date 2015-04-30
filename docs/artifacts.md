@@ -29,7 +29,7 @@
 		- [x] get the layout looking a little more like the wireframes and a little less like a list
 	- [] iteration 3 - improved layout for detail view
 		- [x] get the layout looking a little more like the wireframes and a little less like a list
-		- [] write the loaded description html to the page rather than as text
+		- [x] write the loaded description html to the page rather than as text
 		- [] turn tags into clickable searches
 	- [] iteration 4 - managing data load
 		- [] remove load data button and load data automatically instead
