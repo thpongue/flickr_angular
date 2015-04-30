@@ -9,7 +9,7 @@
 	</section>
 	<section id='detail_body'>
 		<img id='media' ng-src='{{ctrl.flickrData.value.items[ctrl.index].media.m}}'>
-		<span id='description'>{{ctrl.flickrData.value.items[ctrl.index].description}}</span>
+		<span id='description' ng-bind-html="ctrl.renderHtml(ctrl.flickrData.value.items[ctrl.index].description)"></span>
 		<span id='tags'>Tags: {{ctrl.flickrData.value.items[ctrl.index].tags}}</span>
 	</section>
 </section>
