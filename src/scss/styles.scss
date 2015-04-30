@@ -4,16 +4,12 @@ html *
 	color: #000;
 	font-family: Arial;
 }
+$normal_width: 1100px;
 
 /*list view*/
-$list_view_itemWidth : 1100px;
-$list_view_mediaWidth : 300px;
-$list_view_gap : 50px;
-$list_view_itemTextWidth : $list_view_itemWidth - $list_view_mediaWidth - $list_view_gap;
-
 #list_view {
 	.item {
-		width: $list_view_itemWidth;
+		width: $normal_width;
 		position: relative;
 		clear: left;
 		padding: 20px 20px 20px 20px;
@@ -21,13 +17,13 @@ $list_view_itemTextWidth : $list_view_itemWidth - $list_view_mediaWidth - $list_
 
 	.media {
 		float: left;
-		width: $list_view_mediaWidth;
+		margin-right: 10px;
 	}
 
 	.item_text {
-		float: right;
-		width: $list_view_itemTextWidth;
+		width: auto;
 		word-wrap: break-word;
+		padding-left: 10px;
 	}
 
 	#title {
@@ -43,13 +39,10 @@ $list_view_itemTextWidth : $list_view_itemWidth - $list_view_mediaWidth - $list_
 }
 
 /*detail view*/
-$detail_view_bodyWidth : 1100px;
-$detail_view_mediaWidth : 300px;
-$detail_view_gap : 50px;
-$detail_view_detail_text_width : $detail_view_bodyWidth - $detail_view_mediaWidth - $detail_view_gap;
 #detail_view {
+	padding: 20px;
+
 	#title {
-		float: left;
 		font-weight: bold;
 		font-size: 20px;
 	}
@@ -63,7 +56,7 @@ $detail_view_detail_text_width : $detail_view_bodyWidth - $detail_view_mediaWidt
 		display: block;
 		padding-bottom: 10px;
 		height: 30px;
-		width: $detail_view_bodyWidth;
+		width: $normal_width;
 	}
 
 	#detail_sub_header {
@@ -74,10 +67,9 @@ $detail_view_detail_text_width : $detail_view_bodyWidth - $detail_view_mediaWidt
 	}
 
 	#detail_body {
-		width: $detail_view_bodyWidth;
+		width: $normal_width;
 		position: relative;
-		display: block;
-		overflow:auto; 
+		overflow: auto; 
 	}
 	
 	#author {
@@ -85,18 +77,17 @@ $detail_view_detail_text_width : $detail_view_bodyWidth - $detail_view_mediaWidt
 	}	
 
 	#media {
-		float: left;
 	}
 
 	#description {
 		position: absolute;
-		left: $detail_view_mediaWidth;
-		width: $detail_view_detail_text_width;
+		width: auto;
+		margin-left: 10px;
 	}
 
 	#tags {
-		position:absolute;
-		left:$detail_view_mediaWidth;
-		bottom:0px;
+		position: absolute;
+		bottom: 0px;
+		margin-left: 10px;
 	}
 }

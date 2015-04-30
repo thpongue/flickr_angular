@@ -2,12 +2,12 @@
 	<input id='loadDataButton' type='button' value='load data' ng-click='ctrl.loadData()'></input>
 	<section id='items' ng-repeat='item in ctrl.flickrData.value.items'>
 		<article class='item' id='item{{$index+1}}'>
-			<img class='media' id='media' ng-src='{{ctrl.flickrData.value.items[$index].media.m}}'>
+			<a href='#detail_view/{{$index}}'><img class='media' id='media' ng-src='{{ctrl.flickrData.value.items[$index].media.m}}'></a>
 			<section class='item_text'>
 				<a id='title' href='#detail_view/{{$index}}'>{{ctrl.flickrData.value.items[$index].title}}</a>
 				<span id='author'>{{ctrl.flickrData.value.items[$index].author}}</span>
 				<span id='date_taken'>Published: {{ctrl.flickrData.value.items[$index].date_taken | date:"dd MMMM yyyy 'at' h:mma"}}</span>
-				<a id='link'  href='{{ctrl.flickrData.value.items[$index].link}}'>View on Flickr</a>
+				<a id='link' href='{{ctrl.flickrData.value.items[$index].link}}'>View on Flickr</a>
 			</section>
 		</article>
 	</section>

@@ -1,3 +1,5 @@
+- make my detail view image come up in the correct size
+- layout my list view using auto
 - update protractor tests to support (https://support.google.com/a/answer/33864)
 	- chrome
 	- firefox
