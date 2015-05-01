@@ -1,7 +1,6 @@
 describe('the user enters the site via the list page, loads the data, sees at least 10 entries and leaves', function() {
 	beforeEach(function() {
 		browser.get('http://localhost:8001');
-		element(by.css('#loadDataButton')).click();
 	});
 
 	var numberOfItems = 10;

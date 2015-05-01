@@ -30,11 +30,12 @@
 	- [x] iteration 3 - improved layout for detail view
 		- [x] get the layout looking a little more like the wireframes and a little less like a list
 		- [x] write the loaded description html to the page rather than as text
-	- [] iteration 4 - managing data load
-		- [] automatic data load (not button click)
-		- [] data persistence (when clicking back from detail view)
-	- [] iteration 5 - add colour and graphics
+	- [x] iteration 4 - managing data load
+		- [x] automatic data load (not button click)
+		- [x] data persistence (when clicking back from detail view)
+	- [] iteration 5 - improve design + layout
 		- [] alt text for images
+		- [] detail view should handle longer titles without them going over the content below
 	- [] iteration 6 - responsiveness
 	- [] iteration 7 - cross browser testing and tweaks
 		- [] update protractor tests to support (https://support.google.com/a/answer/33864)

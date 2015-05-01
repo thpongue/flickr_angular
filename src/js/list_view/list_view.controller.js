@@ -9,11 +9,7 @@
 		var vm = this;
 
 		// bindable properties
-		vm.flickrData = null;
-		vm.loadData = loadData;
-		
-		// private
-		function loadData() {
+		if (!vm.flickrData) {
 			vm.flickrData = flickrDataService.getData();
 		}
 	};

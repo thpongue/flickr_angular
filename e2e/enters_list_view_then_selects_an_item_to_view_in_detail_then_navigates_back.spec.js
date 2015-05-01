@@ -1,7 +1,6 @@
 describe('the user enters the site via the list page, loads the data and selects the 5th item, views it in the detail page then goes back to the list page ', function() {
 	it('should successfully navigate to from the list view to the detail view and back, detail view should contain additional tags and description', function() {
-		browser.get('http://localhost:8001');
-		element(by.css('#loadDataButton')).click().then(function() {
+		browser.get('http://localhost:8001').then(function() {
 
 			var original_media;
 			var original_title;

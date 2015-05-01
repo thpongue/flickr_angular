@@ -1,11 +1,6 @@
 describe('list view controller test', function() {
 
-	it('should default to no flickrData', function() {
-		expect(sut.flickrData).toBe(null);
-	});
-
 	it('should populate flickrData using the flickrDataService when loadData is called', function() {
-		sut.loadData();
 		expect(mockFlickrDataService.getData).toHaveBeenCalled();
 		expect(sut.flickrData).toEqual(jasmine.any(FlickrData));
 	});
