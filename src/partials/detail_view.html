@@ -5,7 +5,7 @@
 	</section>
 	<section id='detail_sub_header'>
 		<span id='author'>{{ctrl.flickrData.value.items[ctrl.index].author}}</span>
-		<span id='date_taken'>{{ctrl.flickrData.value.items[ctrl.index].date_taken | date:"dd MMMM yyyy 'at' h:mma"}}</span>
+		<span id='date_taken'>Published: {{ctrl.flickrData.value.items[ctrl.index].date_taken | date:"dd MMMM yyyy 'at' h:mma"}}</span>
 	</section>
 	<section id='detail_body'>
 		<img id='media' ng-src='{{ctrl.flickrData.value.items[ctrl.index].media.m}}'>

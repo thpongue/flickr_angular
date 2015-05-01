@@ -10,7 +10,6 @@ describe('the user enters the site via the list page, loads the data and selects
 			var original_link;
 
 			element(by.css('#items #item5 img#media')).getAttribute('src').then(function(text){
-				console.log("text = " + text);
 				original_media = text;
 				element(by.css('#items #item5 #title')).getText().then(function(text){
 					original_title = text;
@@ -18,9 +17,9 @@ describe('the user enters the site via the list page, loads the data and selects
 						original_author = text;
 						element(by.css('#items #item5 #date_taken')).getText().then(function(text){
 							original_date_taken = text;
-							element(by.css('#items #item5 #link')).getText().then(function(text){
+							element(by.css('#items #item5 #flickr_link')).getAttribute('src').then(function(text){
 								original_link = text;
-								element(by.css('#items #item5 #detailView')).click().then(function() {
+								element(by.css('#items #item5 #title')).click().then(function() {
 									browser.getCurrentUrl().then(function (url) {
 										expect(url).toContain('#/detail_view');
 										// these should match what we found on the list page
@@ -36,7 +35,7 @@ describe('the user enters the site via the list page, loads the data and selects
 										element(by.css('#date_taken')).getText().then(function(text) {
 											expect(text).toEqual(original_date_taken);			
 										});
-										element(by.css('#link')).getText().then(function(text) {
+										element(by.css('#title')).getAttribute('src').then(function(text) {
 											expect(text).toEqual(original_link);			
 										});
 										// these aren't on the list page but should be present

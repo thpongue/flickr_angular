@@ -11,7 +11,7 @@ describe('the user enters the site via the list page, loads the data, sees at le
 			expect(element(by.css('#items #item'+ i +' #title')).isPresent()).toBe(true);
 			expect(element(by.css('#items #item'+ i +' #author')).isPresent()).toBe(true);
 			expect(element(by.css('#items #item'+ i +' #date_taken')).isPresent()).toBe(true);
-			expect(element(by.css('#items #item'+ i +' #link')).isPresent()).toBe(true);
+			expect(element(by.css('#items #item'+ i +' #flickr_link')).isPresent()).toBe(true);
 		}
 	});
 })
