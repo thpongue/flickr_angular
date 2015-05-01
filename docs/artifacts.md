@@ -27,16 +27,36 @@
 			- [x] load the image
 	- [x] iteration 2 - improved layout for list view
 		- [x] get the layout looking a little more like the wireframes and a little less like a list
-	- [] iteration 3 - improved layout for detail view
+	- [x] iteration 3 - improved layout for detail view
 		- [x] get the layout looking a little more like the wireframes and a little less like a list
 		- [x] write the loaded description html to the page rather than as text
-		- [] turn tags into clickable searches
 	- [] iteration 4 - managing data load
-		- [] remove load data button and load data automatically instead
-		- [] when clicking back from detail view to list view persist the data
-		- [] if the user goes directly to the detail view give a friendly message to say that no entry has been selected
+		- [] automatic data load (not button click)
+		- [] data persistence (when clicking back from detail view)
+	- [] iteration 5 - add colour and graphics
+		- [] alt text for images
+	- [] iteration 6 - responsiveness
+	- [] iteration 7 - cross browser testing and tweaks
+		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
+			- [] chrome
+			- [] firefox
+			- [] internet explorer
+			- [] safari	
+	- [] iteration 8 - turn tags into clickable searches
 	- [] iteration x (to sort)
+		- [] if the user goes directly to the detail view give a friendly message to say that no entry has been selected
 		- [] we don't have a direct link to the author but there probably is a way of doing this via their api - take a look
 		- [] extract the part of the user name in brackets and link to the part of the user name before the brackets
-		- [] loading indicator
-		- [] responsive
+		- [] loading indicator - and handle the data load elegantly
+		- [] no description provided should be replaced with a graphic of some sort
+		- [] super long text on the list page moves under the image float - fix
+		- [] build
+			- [] use run-sequence to manage dependencies
+			- [] gulp-angular-protractor doesn't work with gulp-load-plugins
+			- [] gulp prod needed - [] [] currently only have a local build which includes the map files
+			- [] output integration test results to file (and .gitignore it)
+			- [] watch is exiting on js errors - [] [] fix
+			- [] implement ng-annotate
+			- [] implement jshint (https://github.com/johnpapa/angular-styleguide#style-y230)
+			- [] implement an options file (https://github.com/johnpapa/angular-styleguide#style-y235)
+			- [] implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)
