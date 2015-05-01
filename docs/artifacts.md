@@ -32,10 +32,12 @@
 		- [x] write the loaded description html to the page rather than as text
 	- [x] iteration 4 - managing data load
 		- [x] automatic data load (not button click)
-		- [x] data persistence (when clicking back from detail view)
+		- [x] data persistence (dont reload when clicking back from detail view)
 	- [] iteration 5 - improve design + layout
-		- [] alt text for images
 		- [] detail view should handle longer titles without them going over the content below
+		- [] list view should handle titles without spaces (currently they fall below the image float)
+		- [] alt text for images
+		- [] detail view should look good whilst loading the data
 	- [] iteration 6 - responsiveness
 	- [] iteration 7 - cross browser testing and tweaks
 		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
