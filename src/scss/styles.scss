@@ -32,6 +32,7 @@ $normal_width: 1100px;
 		font-size: 20px;
 		padding-bottom: 20px;
 		display: block;
+		overflow: auto;
 	}
 
 	#author, #date_taken {
@@ -39,11 +40,14 @@ $normal_width: 1100px;
 	}
 }
 
+$back_button_width: 100px;
 /*detail view*/
 #detail_view {
 	padding: 20px;
 
 	#title {
+		display: inline-block;
+		width: $normal_width - $back_button_width;
 		font-weight: bold;
 		font-size: 20px;
 	}
@@ -58,6 +62,7 @@ $normal_width: 1100px;
 		padding-bottom: 10px;
 		height: 30px;
 		width: $normal_width;
+		height: auto;
 	}
 
 	#detail_sub_header {

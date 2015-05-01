@@ -34,8 +34,8 @@
 		- [x] automatic data load (not button click)
 		- [x] data persistence (dont reload when clicking back from detail view)
 	- [] iteration 5 - improve design + layout
-		- [] detail view should handle longer titles without them going over the content below
-		- [] list view should handle titles without spaces (currently they fall below the image float)
+		- [x] detail view should handle longer titles without them going over the content below
+		- [x] list view should handle titles without spaces (currently they fall below the image float)
 		- [] alt text for images
 		- [] detail view should look good whilst loading the data
 	- [] iteration 6 - responsiveness
