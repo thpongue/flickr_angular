@@ -11,18 +11,22 @@
 			flickrUrl: 'https://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK',
 			getData: getData
 		}
+
+		var flickrData;
 		
 		// private 
 		function getData() {
-			var ret = new FlickrData();
-			this.http.jsonp(this.flickrUrl)
-				.success(function(data, status, headers, config) {
-					ret.setValue(data);
-				})
-				.error(function(data, status, headers, config) {
-					ret.setValue(null);
-				});
-			return ret;
+			if (!flickrData) {
+				flickrData = new FlickrData();
+				this.http.jsonp(this.flickrUrl)
+					.success(function(data, status, headers, config) {
+						flickrData.setValue(data);
+					})
+					.error(function(data, status, headers, config) {
+						flickrData.setValue(null);
+					});
+			}
+			return flickrData;
 		}
 	}
 }());

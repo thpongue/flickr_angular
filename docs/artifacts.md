@@ -33,19 +33,24 @@
 	- [x] iteration 4 - managing data load
 		- [x] automatic data load (not button click)
 		- [x] data persistence (dont reload when clicking back from detail view)
-	- [] iteration 5 - improve design + layout
+	- [x] iteration 5 - fix ux and performance niggles
 		- [x] detail view should handle longer titles without them going over the content below
 		- [x] list view should handle titles without spaces (currently they fall below the image float)
-		- [] alt text for images
-		- [] detail view should look good whilst loading the data
-	- [] iteration 6 - responsiveness
-	- [] iteration 7 - cross browser testing and tweaks
+		- [x] work out why we are calling the data twice including from the detail view
+	- [] iteration 6 - colour and css improvements
+		- [] fonts and sizes
+		- [] select background colour, border for images and section colour
+			- decide whether to use alternate colours for the list view 
+	- [] iteration 7 - responsiveness
+		- [] implement media query below a certain size
+		- [] test on my phone 
+	- [] iteration 8 - cross browser testing and tweaks
 		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
 			- [] chrome
 			- [] firefox
 			- [] internet explorer
 			- [] safari	
-	- [] iteration 8 - turn tags into clickable searches
+	- [] iteration 9 - turn tags into clickable searches
 	- [] iteration x (to sort)
 		- [] if the user goes directly to the detail view give a friendly message to say that no entry has been selected
 		- [] we don't have a direct link to the author but there probably is a way of doing this via their api - take a look
