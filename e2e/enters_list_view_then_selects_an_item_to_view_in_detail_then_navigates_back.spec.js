@@ -8,17 +8,17 @@ describe('the user enters the site via the list page, loads the data and selects
 			var original_date_taken;
 			var original_link;
 
-			element(by.css('#items #item5 img#media')).getAttribute('src').then(function(text){
+			element(by.css('#item5 img#media')).getAttribute('src').then(function(text){
 				original_media = text;
-				element(by.css('#items #item5 #title')).getText().then(function(text){
+				element(by.css('#item5 #title')).getText().then(function(text){
 					original_title = text;
-					element(by.css('#items #item5 #author')).getText().then(function(text){
+					element(by.css('#item5 #author')).getText().then(function(text){
 						original_author = text;
-						element(by.css('#items #item5 #date_taken')).getText().then(function(text){
+						element(by.css('#item5 #date_taken')).getText().then(function(text){
 							original_date_taken = text;
-							element(by.css('#items #item5 #flickr_link')).getAttribute('src').then(function(text){
+							element(by.css('#item5 #flickr_link')).getAttribute('src').then(function(text){
 								original_link = text;
-								element(by.css('#items #item5 #title')).click().then(function() {
+								element(by.css('#item5 #title')).click().then(function() {
 									browser.getCurrentUrl().then(function (url) {
 										expect(url).toContain('#/detail_view');
 										// these should match what we found on the list page

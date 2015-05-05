@@ -41,7 +41,10 @@
 		- [] fonts and sizes
 		- [] select background colour, border for images and section colour
 			- decide whether to use alternate colours for the list view 
+		- [] pick a nice web font
+		- [] try an animation of some sort and use a sass mix in (i think to add the vendor prefixes)
 	- [] iteration 7 - responsiveness
+		- [] use view port meta data: http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
 		- [] implement media query below a certain size
 		- [] test on my phone 
 	- [] iteration 8 - cross browser testing and tweaks
