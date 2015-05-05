@@ -1,13 +1,10 @@
-// test code
-.trueClass {
-	height: 0px !important;
-}
 html *
 {
 	font-size: 14px;
 	color: #000;
 	font-family: Arial;
 }
+
 $normal_width: 900px;
 $background_colour: #CCBAA0;
 $highlight_colour: #FFE8C8;
@@ -58,6 +55,10 @@ $border_colour: #362612;
 		height: 20px;
 		background: $border_colour;
 		clear: left;
+	}
+	
+	.hideThisFooter {
+		height: 0px !important;
 	}
 }
 

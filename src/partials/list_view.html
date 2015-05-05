@@ -7,6 +7,6 @@
 			<span id='date_taken'>Published: {{ctrl.flickrData.value.items[$index].date_taken | date:"dd MMMM yyyy 'at' h:mma"}}</span>
 			<a id='flickr_link' href='{{ctrl.flickrData.value.items[$index].link}}'>View on Flickr</a>
 		</section>
-		<footer ng-class="'{{($index >= ctrl.flickrData.value.items.length-1) ? 'trueClass' : 'falseClass'}}'"></footer>
+		<footer ng-class="'{{($index >= ctrl.flickrData.value.items.length-1) ? 'hideThisFooter' : 'showThisFooter'}}'"></footer>
 	</section>
 </section>
