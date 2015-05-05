@@ -1,13 +1,12 @@
 <section id='list_view' ng-controller='list_view_controller as ctrl'>
 	<section class='item' id='item{{$index}}' ng-repeat='item in ctrl.flickrData.value.items'>
 		<a href='#detail_view/{{$index}}'><img class='media' id='media' ng-src='{{ctrl.flickrData.value.items[$index].media.m}}'></a>
-		<section class='item_text'>
+		<section class="item_text">
 			<a id='title' href='#detail_view/{{$index}}'>{{ctrl.flickrData.value.items[$index].title}}</a>
 			<span id='author'>{{ctrl.flickrData.value.items[$index].author}}</span>
 			<span id='date_taken'>Published: {{ctrl.flickrData.value.items[$index].date_taken | date:"dd MMMM yyyy 'at' h:mma"}}</span>
 			<a id='flickr_link' href='{{ctrl.flickrData.value.items[$index].link}}'>View on Flickr</a>
 		</section>
-		<!--<footer ng-class='{{$index == ctrl.flickrData.value.items.length-1 ? "trueClass" : "falseClass"}}'></footer>-->
 		<footer ng-class="'{{($index >= ctrl.flickrData.value.items.length-1) ? 'trueClass' : 'falseClass'}}'"></footer>
 	</section>
 </section>

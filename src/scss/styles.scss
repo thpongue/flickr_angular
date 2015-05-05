@@ -8,7 +8,7 @@ html *
 	color: #000;
 	font-family: Arial;
 }
-$normal_width: 1100px;
+$normal_width: 900px;
 $background_colour: #CCBAA0;
 $highlight_colour: #FFE8C8;
 $border_colour: #362612;
@@ -26,33 +26,30 @@ $border_colour: #362612;
 	.item {
 		background: $background_colour;
 		position: relative;
-		clear: left;
 		&:hover {
 			background: $highlight_colour;
 		}
 	}
 
-	.media {
-		float: left;
-		margin-right: 10px;
+	.item_text {
+		padding-top: 10px;
 	}
 
-	.item_text {
-		width: auto;
-		word-wrap: break-word;
-		padding: 10px 0px;
+	.media {
+		margin-right: 10px;
+		display: block;
+		float: left;
 	}
 
 	#title {
-		text-decoration: none;
 		font-weight: bold;
 		font-size: 20px;
-		padding-bottom: 20px;
 		display: block;
 		overflow: auto;
+		padding-bottom: 10px;
 	}
 
-	#author, #date_taken {
+	#date_taken {
 		margin-right: 20px;
 	}
 
