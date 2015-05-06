@@ -147,7 +147,7 @@ $padding: 20px;
 	.info_section {
 		@include border-radius(4px);
 		width: 600px;
-		height: 60px;
+		height: auto;
 		display: inline-block;
 		margin-left: 10px;
 		margin-bottom: 10px;
