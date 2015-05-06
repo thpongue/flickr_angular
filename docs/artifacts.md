@@ -1,4 +1,4 @@
-- [] flickr viewer
+- [x] flickr viewer
 	- [x] iteration 1 - mvp
 		- [x] list view
 			- [x] can navigate to page
@@ -44,9 +44,7 @@
 	- [x] iteration 7 - responsiveness
 		- [x] use view port meta data: http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
 		- [x] implement media query below a certain size
-	- [] iteration 8 - cross browser testing and tweaks
-		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
-			- [] chrome
-			- [] firefox
-			- [] internet explorer
-			- [] safari	
+	- [x] iteration 8 - cross browser testing and tweaks
+		- [x] chrome
+		- [x] firefox
+		- [x] safari	
