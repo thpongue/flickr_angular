@@ -105,13 +105,12 @@ $padding: 20px;
 
 	#title {
 		display: inline-block;
-		width: $normal_width - $back_button_width - ($padding*2);
 		font-weight: bold;
 		font-size: 20px;
 	}
 	
 	#listView {
-		width: $back_button_width;
+		float: right;
 		display: inline-block;
 		text-align: right;
 	}
@@ -126,12 +125,10 @@ $padding: 20px;
 	#detail_sub_header {
 		position: relative;
 		display: block;
-		padding-bottom: 10px;
 		height: 30px;
 	}
 
 	#detail_body {
-		width: $normal_width;
 		position: relative;
 		overflow: auto; 
 	}
@@ -142,15 +139,14 @@ $padding: 20px;
 
 	#media {
 		float: left;
+		margin-right: 20px;
 	}
 
 	.info_section {
 		@include border-radius(4px);
-		width: 600px;
 		height: auto;
-		display: inline-block;
-		margin-left: 10px;
-		margin-bottom: 10px;
+		display: table;
+		margin-top: 10px;
 		padding: 5px;
 		background: $highlight_colour;
 	}
@@ -161,5 +157,84 @@ $padding: 20px;
 
 	#tags{
 		font-weight: bold;
+	}
+	
+}
+
+@media screen and (max-width: 1000px) {
+	
+	#container, #project_title {
+		width: 90%;
+	}
+
+	#project_title p {
+		font-size: 30px;
+	}
+
+	#title {
+		font-size: 16px !important;
+	}
+
+	#flickr_link {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	#container, #project_title {
+		width: 90%;
+	}
+
+	#project_title p {
+		font-size: 20px;
+	}
+	
+	#title {
+		padding-bottom: 5px;
+		display: inline-block;
+		font-size: 16px !important;
+	}
+	
+	#list_view {
+
+		#author {
+			display: block;
+		}	
+
+		#flickr_link {
+			display: block;
+		}
+
+		#media {
+			float: none;
+			display: block;
+			padding-top: 10px;
+			margin-left: auto;
+			margin-right: auto
+		}
+
+		.item_text {
+			margin: 10px 10px 0px 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+	#detail_view {
+		#media {
+			float: none;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 10px;
+		}
+
+		.info_section {
+			display: block;
+		}
+
+		#date_taken {
+			display: block;
+		}
 	}
 }

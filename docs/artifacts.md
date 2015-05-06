@@ -41,9 +41,9 @@
 		- [x] select background colour, border for images and section colour
 		- [x] web font for title
 		- [x] border radius mixin
-	- [] iteration 7 - responsiveness
-		- [] use view port meta data: http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
-		- [] implement media query below a certain size
+	- [x] iteration 7 - responsiveness
+		- [x] use view port meta data: http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
+		- [x] implement media query below a certain size
 	- [] iteration 8 - cross browser testing and tweaks
 		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
 			- [] chrome

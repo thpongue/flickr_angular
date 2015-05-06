@@ -5,7 +5,7 @@
 			<a id='title' href='#detail_view/{{$index}}'>{{ctrl.flickrData.value.items[$index].title}}</a>
 			<span id='author'>{{ctrl.flickrData.value.items[$index].author}}</span>
 			<span id='date_taken'>Published: {{ctrl.flickrData.value.items[$index].date_taken | date:"dd MMMM yyyy 'at' h:mma"}}</span>
-			<a id='flickr_link' href='{{ctrl.flickrData.value.items[$index].link}}'>View on Flickr</a>
+			<a id='flickr_link' href='{{ctrl.flickrData.value.items[$index].link}}'>View&nbsp;on&nbsp;Flickr</a>
 		</section>
 		<footer ng-class="'{{($index >= ctrl.flickrData.value.items.length-1) ? 'hideThisFooter' : 'showThisFooter'}}'"></footer>
 	</section>
