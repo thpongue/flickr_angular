@@ -37,12 +37,10 @@
 		- [x] detail view should handle longer titles without them going over the content below
 		- [x] list view should handle titles without spaces (currently they fall below the image float)
 		- [x] work out why we are calling the data twice including from the detail view
-	- [] iteration 6 - colour and css improvements
-		- [] fonts and sizes
-		- [] select background colour, border for images and section colour
-			- decide whether to use alternate colours for the list view 
-		- [] pick a nice web font
-		- [] try an animation of some sort and use a sass mix in (i think to add the vendor prefixes)
+	- [x] iteration 6 - colour and css improvements
+		- [x] select background colour, border for images and section colour
+		- [x] web font for title
+		- [x] border radius mixin
 	- [] iteration 7 - responsiveness
 		- [] use view port meta data: http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
 		- [] implement media query below a certain size
@@ -53,21 +51,3 @@
 			- [] firefox
 			- [] internet explorer
 			- [] safari	
-	- [] iteration 9 - turn tags into clickable searches
-	- [] iteration x (to sort)
-		- [] if the user goes directly to the detail view give a friendly message to say that no entry has been selected
-		- [] we don't have a direct link to the author but there probably is a way of doing this via their api - take a look
-		- [] extract the part of the user name in brackets and link to the part of the user name before the brackets
-		- [] loading indicator - and handle the data load elegantly
-		- [] no description provided should be replaced with a graphic of some sort
-		- [] super long text on the list page moves under the image float - fix
-		- [] build
-			- [] use run-sequence to manage dependencies
-			- [] gulp-angular-protractor doesn't work with gulp-load-plugins
-			- [] gulp prod needed - [] [] currently only have a local build which includes the map files
-			- [] output integration test results to file (and .gitignore it)
-			- [] watch is exiting on js errors - [] [] fix
-			- [] implement ng-annotate
-			- [] implement jshint (https://github.com/johnpapa/angular-styleguide#style-y230)
-			- [] implement an options file (https://github.com/johnpapa/angular-styleguide#style-y235)
-			- [] implement file snippets (missing from the JP docs but something like this: https://github.com/johnpapa/angular-styleguide#style-y250)

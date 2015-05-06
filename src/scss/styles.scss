@@ -1,9 +1,29 @@
+@font-face {
+    font-family: 'daniel_boldmedium';
+    src: url('../fonts/daniel_bold-webfont.eot');
+    src: url('../fonts/daniel_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/daniel_bold-webfont.woff2') format('woff2'),
+         url('../fonts/daniel_bold-webfont.woff') format('woff'),
+         url('../fonts/daniel_bold-webfont.ttf') format('truetype'),
+         url('../fonts/daniel_bold-webfont.svg#daniel_boldmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 html *
 {
 	font-size: 14px;
 	color: #000;
-	font-family: Arial;
+	font-family: Sans-Serif;
 }
+
 
 $normal_width: 900px;
 $background_colour: #CCBAA0;
@@ -11,11 +31,21 @@ $highlight_colour: #FFE8C8;
 $border_colour: #362612;
 
 /*all*/
+#project_title {
+	margin: 0 auto;
+	width: $normal_width;
+	text-align: center;
+	p {
+		font-family: 'daniel_boldmedium', Sans-Serif;
+		font-size: 40px;
+	}
+}
+
 #container {
 	margin: 0 auto;
 	border: 22px solid $border_colour;
 	width: $normal_width;
-	border-radius: 10px;
+	@include border-radius(10px);
 }
 
 /*list view*/
@@ -62,10 +92,12 @@ $border_colour: #362612;
 	}
 }
 
-$back_button_width: 100px;
+$back_button_width: 140px;
+$padding: 20px;
 /*detail view*/
 #detail_view {
-	padding: 20px;
+	padding: $padding;;
+	background: $background_colour;
 
 	#content {
 		background: $background_colour;
@@ -73,22 +105,22 @@ $back_button_width: 100px;
 
 	#title {
 		display: inline-block;
-		width: $normal_width - $back_button_width;
+		width: $normal_width - $back_button_width - ($padding*2);
 		font-weight: bold;
 		font-size: 20px;
 	}
 	
 	#listView {
-		float: right;
+		width: $back_button_width;
+		display: inline-block;
+		text-align: right;
 	}
 
 	#detail_header {
 		position: relative;
 		display: block;
-		padding-bottom: 10px;
-		height: 30px;
-		width: $normal_width;
 		height: auto;
+		margin-bottom: 10px;
 	}
 
 	#detail_sub_header {
@@ -109,17 +141,25 @@ $back_button_width: 100px;
 	}	
 
 	#media {
+		float: left;
 	}
 
-	#description {
-		position: absolute;
-		width: auto;
+	.info_section {
+		@include border-radius(4px);
+		width: 600px;
+		height: 60px;
+		display: inline-block;
 		margin-left: 10px;
+		margin-bottom: 10px;
+		padding: 5px;
+		background: $highlight_colour;
 	}
 
-	#tags {
-		position: absolute;
-		bottom: 0px;
-		margin-left: 10px;
+	#description_title {
+		font-weight: bold;
+	}
+
+	#tags_title {
+		font-weight: bold;
 	}
 }

@@ -58,6 +58,14 @@ gulp.task('partials', function() {
 		.pipe(gulp.dest('build/partials/'));
 });
 
+//----------------------------------------------------------------
+// copy fonts
+//----------------------------------------------------------------
+gulp.task('fonts', function() {
+	return gulp.src('fonts/*.*')
+		.pipe(gulp.dest('build/fonts/'));
+});
+
 
 //----------------------------------------------------------------
 // sass
@@ -172,7 +180,7 @@ gulp.task('tests', ["localBuild"], function() {
 
 // local build
 gulp.task('localBuild', ['clean'], function() {
-	gulp.start('scripts', 'libs', 'sass', 'html', 'partials');
+	gulp.start('scripts', 'libs', 'sass', 'html', 'partials', 'fonts');
 });
 
 // build then unit tests
