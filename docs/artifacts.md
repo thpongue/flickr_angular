@@ -44,7 +44,6 @@
 	- [] iteration 7 - responsiveness
 		- [] use view port meta data: http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
 		- [] implement media query below a certain size
-		- [] test on my phone 
 	- [] iteration 8 - cross browser testing and tweaks
 		- [] update protractor tests to support (https://support.google.com/a/answer/33864)
 			- [] chrome

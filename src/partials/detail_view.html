@@ -11,11 +11,11 @@
 		<img id='media' ng-src='{{ctrl.flickrData.value.items[ctrl.index].media.m}}'>
 		<section class='info_section'>
 			<div id='description_title'>Description:</div>
-			<div id='description_text' ng-bind-html='ctrl.renderHtml(ctrl.flickrData.value.items[ctrl.index].description)'></div>
+			<div id='description' ng-bind-html='ctrl.renderHtml(ctrl.flickrData.value.items[ctrl.index].description)'></div>
 		</section>
 		<section class='info_section'>
 			<div id='tags_title'>Tags:</div>
-			<div id='tags_text'>{{ctrl.flickrData.value.items[ctrl.index].tags}}</div>
+			<div id='tags'>{{ctrl.flickrData.value.items[ctrl.index].tags}}</div>
 		</section>
 	</section>
 </section>
